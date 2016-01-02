@@ -17,8 +17,8 @@
 	{
 		"id": "xy116lGqwww5juRW116mvQ74H3zJaarqtueNAyL1LlQHbpzpSJhugfcffHE23cxYurk7h1AHaLvhiU5sYjsIxKlDhQ117117",
 		"name": "Castor",
-		"summary": "Easily convert spreadsheets into accessible URL endpoints.",
-		"details": "Easily convert spreadsheets into accessible URL endpoints.",
+		"summary": "Easily convert spreadsheets into accessible URL endpoints. Friction-less data passing. Monitor access to gain insight. With revenue generation coming soon.",
+		"details": "Easily convert spreadsheets into accessible URL endpoints. Friction-less data passing. Monitor access to gain insight. With revenue generation coming soon.",
 		"website": "https://www.apicastor.com/",
 		"twitter": "https://twitter.com/apicastor",
 		"github": "",
@@ -69,9 +69,9 @@
 		"github": "https://github.com/google",
 		"blog": "",
 		"blogrss": "http://feeds.feedburner.com/GoogleAdsDeveloperBlog",
-		"logo": "http://deployment.googleapps.com/_/rsrc/1326052805286/Home/user-resources/google-icons-and-logos/google_logo_3D_online_medium.png",
+		"logo": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-logo.jpg",
 		"logo_width": "150",
-		"screenshot": "http://deployment.googleapps.com/_/rsrc/1326052805286/Home/user-resources/google-icons-and-logos/google_logo_3D_online_medium.png",
+		"screenshot": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-logo.jpg",
 		"tags": null
 	},
 	{
@@ -105,21 +105,6 @@
 		"tags": null
 	},
 	{
-		"id": "MfOZg4UAj9s2N123wkVxTHxIo3w2QGyKmDk1168uERRiZFSpGg8g116Jqp6d3Hjy7a0qDJuyVJwMklSlh7qtifkMN4fg117117",
-		"name": "Quip",
-		"summary": false,
-		"details": "",
-		"website": "https://quip.com/",
-		"twitter": "https://twitter.com/quip",
-		"github": "",
-		"blog": "https://quip.com/blog/",
-		"blogrss": "https://quip.com/blog/feed",
-		"logo": "",
-		"logo_width": "0",
-		"screenshot": "",
-		"tags": null
-	},
-	{
 		"id": "ZaunItllamJIjUhK4123D0xN06Yrtxd9oFKieylEYxC5szf6FCOnvQnhQbM6ZdnV8VB1hbGc1F8gTSpto0lqrYtQ117117",
 		"name": "Ragic",
 		"summary": "Ragic enables business people without programming skills to create cloud databases just like how they create a spreadsheet form. Ragic focuses on helping companies and teams who have outgrown their Excel files, to move on to a real database solution that can scale in terms of users, data relation, and data size. Users of Ragic are able to build their own database applications without a line of cod",
@@ -144,9 +129,9 @@
 		"github": "https://github.com/restlet",
 		"blog": "http://restlet.com/blog",
 		"blogrss": "http://restlet.com/blog/feed/",
-		"logo": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/apispark-logo",
-		"logo_width": "275",
-		"screenshot": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/apispark-logo",
+		"logo": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Logo-Restlet-Horizontal-800x225.png",
+		"logo_width": "150",
+		"screenshot": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Logo-Restlet-Horizontal-800x225.png",
 		"tags": null
 	},
 	{
@@ -199,14 +184,14 @@
 		"name": "Sheetsu",
 		"summary": "Turn Google Spreadsheet into API. Without setup or plugins. Use it anywhere. POST and GET your data to Google Spreadsheet. Use spreadsheet as your database. Use Zapier to save data into spreadsheet.",
 		"details": "Turn Google Spreadsheet into API. Without setup or plugins. Use it anywhere. POST and GET your data to Google Spreadsheet. Use spreadsheet as your database. Use Zapier to save data into spreadsheet.",
-		"website": null,
-		"twitter": null,
-		"github": null,
-		"blog": null,
-		"blogrss": null,
-		"logo": null,
-		"logo_width": null,
-		"screenshot": null,
+		"website": "http://sheetsu.com/",
+		"twitter": "",
+		"github": "",
+		"blog": "",
+		"blogrss": "",
+		"logo": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/sheetsu-logo.png",
+		"logo_width": "150",
+		"screenshot": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/sheetsu-logo.png",
 		"tags": null
 	},
 	{
