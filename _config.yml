@@ -57,7 +57,7 @@ navigation:
     padding: 2
     decorate: 0
   - label1: Organizations
-    link1: /companies.html
+    link1: /organizations/
     size1: 80
     extend: 1
     label2: JSON
