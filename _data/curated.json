@@ -1,5 +1,13 @@
 [
 	{
+		"curated_id": "ynpwI0VWCrJU91I5gn7kqxgGKriFHiOURL8mhSQfk116JVEm116PZEB591239JGFYrbzImeOU6yWDtPjZrOCzZrQ9l3Q117117",
+		"item_date": "2016-09-29 00:00:00",
+		"title": "Introducing the Google Sheets API v4 Transferring data from a SQL database to a Sheet",
+		"url": "https://gsuite-developers.googleblog.com/2016/06/introducing-google-sheets-api-v4.html",
+		"domain": "gsuite-developers.googleblog.com",
+		"image": ""
+	},
+	{
 		"curated_id": "u123dZ9Dh3czfXNquXUBQqPm5nytrhrWlW0s8OrwwVzuHojER1LilcFU7GMmJMXDGrf116UCWOfcScgxCYAtVxZS3Q117117",
 		"item_date": "2016-08-23 00:00:00",
 		"title": "Work in realtime with presence for documents and spreadsheets",
