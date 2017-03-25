@@ -1,5 +1,13 @@
 [
 	{
+		"curated_id": "03Z5Z5XvbhAAsaLTYHRWOPBSrRom123N6W8zvIPfnBUOrS41230RTJ3zJU4yipFa3wEcby13TQm2aUAymL2VHY7n4Q117117",
+		"item_date": "2017-03-24 00:00:00",
+		"title": "Using Google Sheets and Runscope to Run API Tests with Multiple Variable Sets",
+		"url": "https://blog.runscope.com/posts/using-google-sheets-and-runscope-to-run-api-tests-with-multiple-variable-sets",
+		"domain": "blog.runscope.com",
+		"image": ""
+	},
+	{
 		"curated_id": "89eo4YpDTEgvBEIUsUx9242vySQq4wZugzZ1Qd0XHBmTzHkMyXNPWCsRYWrl116KAenBe31Br9g4ZLL2y24ZKn4w117117",
 		"item_date": "2017-02-17 14:10:55",
 		"title": "Tweet Read write and delete data from a Google Spreadsheet with just a few lines of Python httpstcoqgy4pBxi8p httpstco2TsIDIr4l5",
@@ -438,6 +446,14 @@
 		"url": "http://venturebeat.com/2015/06/15/google-sheets-gets-data-labels-customizable-data-points-and-advanced-filtering/",
 		"domain": "venturebeat.com",
 		"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/venturebeat-com20150615google-sheets-gets-data-labels-customizable-data-points-and-advanced-filtering.png"
+	},
+	{
+		"curated_id": "wEtKzIAZXAxxSVcGlzlTG4lXjQI4JSY9imGf3jiMMoOkTFI1DFoWLSCJSO0123qrdiPx5GnYoZaooBYJpRY6c8QQ117117",
+		"item_date": "2015-06-12 00:00:00",
+		"title": "International Currencies in BOM Tool",
+		"url": "https://blog.octopart.com/archives/2015/06/international-currencies-in-bom-tool",
+		"domain": "blog.octopart.com",
+		"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/blog-octopart-comarchives201506international-currencies-in-bom-tool.png"
 	},
 	{
 		"curated_id": "X9xlyR9yjOeBAhWmDLx3NPla1JSDJtqYv9ySPJzMiNeYh123X116OYMh6c4g0N123xw6jPXmKGvIqq7ebhNjAKsmJ1168g117117",
