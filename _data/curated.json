@@ -1,5 +1,13 @@
 [
 	{
+		"curated_id": "TsrquZcR123jhy0y116oWTfMGdTT0ySfwYncbqEgMuZ9QTKm9zrfMJ9alDG1OMMIkqa0TMNg1169DJ2F0FZnokoN3Orw117117",
+		"item_date": "2017-04-13 00:00:00",
+		"title": "Using Google Sheets filters in Addons with Google Apps Script",
+		"url": "https://gsuite-developers.googleblog.com/2017/04/using-google-sheets-filters-in-add-ons.html",
+		"domain": "gsuite-developers.googleblog.com",
+		"image": ""
+	},
+	{
 		"curated_id": "03Z5Z5XvbhAAsaLTYHRWOPBSrRom123N6W8zvIPfnBUOrS41230RTJ3zJU4yipFa3wEcby13TQm2aUAymL2VHY7n4Q117117",
 		"item_date": "2017-03-24 00:00:00",
 		"title": "Using Google Sheets and Runscope to Run API Tests with Multiple Variable Sets",
