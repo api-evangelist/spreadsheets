@@ -1,0 +1,312 @@
+- slug: blockspring
+  name: Blockspring
+  description: >-
+    Access web services from spreadsheets. Blockspring is the world's library of
+    functions, accessible from everywhere you do work. Your tables automatically
+    stay up-to-date. Save hours of manual, error-prone exports and copy/paste.
+    Get fresh data from any source whenever your spreadsheet recalculates. Build
+    and share powerful spreadsheet tools.
+  url: 'https://api.blockspring.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/blockspring'
+  blog: 'https://open.blockspring.com/blog'
+  blog_rss: ''
+  github: 'https://github.com/blockspring'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/blockspring-logo.png
+  tags: 'Spreadsheets,Spreadsheets,API LIfeycle'
+- slug: spreadcloud
+  name: SpreadCloud
+  description: >-
+    SpreadCloud is connecting the spreadsheet to the cloud. New data sources are
+    popping up every day on the cloud yet most require writing code to access
+    and consume this data. SpreadCloud is making this same data available in the
+    most renowned business analytics application, the spreadsheet. Build smart
+    spreadsheets using SpreadCloud and link any cell in your spreadsheet to
+    external data on the cloud.
+  url: 'http://spreadcloud.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/spreadclouddata'
+  blog: 'http://spreadcloud.com/blog/'
+  blog_rss: 'http://spreadcloud.com/feed/'
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/spreadcloud_flat.png
+  tags: 'Spreadsheets,Finance'
+- slug: microsoft-office
+  name: Microsoft Office
+  description: >-
+    Integrate Office 365 REST APIs powered by Microsoft Graph into your own app
+    to connect to files, calendars, mail and more.
+  url: 'http://dev.office.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/OfficeDev'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/microsoft-office.png
+  tags: 'Spreadsheets,Documents'
+- slug: opsgen
+  name: OpsGen
+  description: >-
+    There's a better way to build connectivity for high-value enterprise,
+    mobile, IoT, and startup applications. OpsGen can help you easily and
+    rapidly create, manage, and scale your API. Visit our website and find your
+    way today!
+  url: 'http://opsgen.com'
+  short_url: ''
+  twitter: 'https://twitter.com/OpsGenAPI'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/opsgen-logo.png
+  tags: 'Spreadsheets,Deployment,Database'
+- slug: fieldbook
+  name: Fieldbook
+  description: >-
+    A database with an API &ndash; as simple as a spreadsheet. Create a
+    lightweight database you can view and edit as easily as a spreadsheet and
+    access via a REST API&mdash;in minutes, with nothing to code or deploy.
+  url: 'https://fieldbook.com'
+  short_url: ''
+  twitter: 'https://twitter.com/fieldbookapp'
+  blog: 'http://docs.fieldbook.com/blog'
+  blog_rss: 'http://docs.fieldbook.com/blog.rss'
+  github: 'https://github.com/fieldbook'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/fieldbook-logo-preview-1.jpg
+  tags: 'Spreadsheets,Deployment'
+- slug: sheetlabs
+  name: Sheetlabs
+  description: >-
+    Sheetlabs turn spreadsheets into well-documented APIs, quickly and easily.
+    Many businesses still share product lists, service coverage areas, or other
+    tabular information with one another using spreadsheets attached to email.
+    There are so many things that can go wrong with this. Sheetlabs was built
+    with the goal of making it really easy for businesses to build APIs on top
+    of their spreadsheets.
+  url: 'https://sheetlabs.com'
+  short_url: ''
+  twitter: 'https://twitter.com/sheetlabs'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/sheetlabs-logo.png
+  tags: 'Spreadsheets,Deployment'
+- slug: ethercalc
+  name: EtherCalc
+  description: >-
+    Your data is saved on the web, and people can edit the same document at the
+    same time. Everybody's changes are instantly reflected on all screens. Work
+    together on inventories, survey forms, list management, brainstorming
+    sessions and more!
+  url: 'https://ethercalc.net/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/EtherCalc.png
+  tags: Spreadsheets
+- slug: sheetsu
+  name: Sheetsu
+  description: >-
+    Turn Google Spreadsheet into API. Without setup or plugins. Use it anywhere.
+    POST and GET your data to Google Spreadsheet. Use spreadsheet as your
+    database. Use Zapier to save data into spreadsheet.
+  url: 'http://sheetsu.com/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/sheetsu-logo.png
+  tags: Spreadsheets
+- slug: smartsheet-platform
+  name: Smartsheet Platform
+  description: >-
+    Smartsheet.com, a leading Software as a Service (SaaS) company, offers an
+    enterprise-ready cloud app for work management and collaboration. The
+    award-winning tool is trusted by more than 40,000 businesses and millions of
+    users in over 160 countries. Regarded for its online project management,
+    collaboration, and file sharing features, Smartsheet's intuitive
+    spreadsheet-like app is used broadly to track and manage diverse types of
+    work including: team projects and task lists, customer information, sales
+    pipelines, event schedules, and business processes.
+  url: 'http://www.smartsheet.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/SmartsheetAPI'
+  blog: 'http://www.smartsheet.com/blog'
+  blog_rss: 'http://www.smartsheet.com/blog/rss.xml'
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/smartsheet.png
+  tags: Spreadsheets
+- slug: scraperwiki
+  name: ScraperWiki
+  description: >-
+    ScraperWiki is a web-based platform for collaboratively building programs to
+    extract and analyze public (online) data, in a wiki-like fashion. Scraper
+    refers to screen scrapers, programs that extract data from websites. Wiki
+    means that any user with programming experience can create or edit such
+    programs for extracting new data, or for analyzing existing datasets. The
+    main use of the website is providing a place for programmers and journalists
+    to collaborate on analyzing public data
+  url: 'https://scraperwiki.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/scraperwiki'
+  blog: 'https://blog.scraperwiki.com/blog/'
+  blog_rss: 'https://blog.scraperwiki.com/feed/'
+  github: 'https://github.com/scraperwiki'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/798px-ScraperWiki_logo.png
+  tags: 'Scraping,Spreadsheets,Deployment'
+- slug: restlet
+  name: Restlet
+  description: >-
+    APISpark is an &nbsp;cloud API platform that lets you create, host, manage
+    and use web APIs. Using the Restlet Framework at its core, APISpark
+    simplifies the web API experience, the time to market, and the overall cost
+    to get started and to scale you APIs. &nbsp;Restlet is a web API platform
+    vendor, pioneer of RESTful web APIs. APISpark serves our customers around
+    the world, providing software to build web APIs, which includes APISpark,
+    the PaaS version of Restlet. &nbsp;APISpark lets you build and deploy your
+    web APIs, which includes the creation, hosting and management--all in one
+    solution.
+  url: 'https://restlet.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/restlet'
+  blog: 'http://restlet.com/blog'
+  blog_rss: 'http://restlet.com/blog/feed/'
+  github: 'https://github.com/restlet'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Logo-Restlet-Horizontal-800x225.png
+  tags: 'Management,Spreadsheets,Design,Deployment,Studio,Cloud'
+- slug: google-fusion-tables
+  name: Google Fusion Tables
+  description: >-
+    Fusion Tables is an experimental data visualization web application to
+    gather, visualize, and share data tables.
+  url: 'https://developers.google.com/fusiontables/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-fusion-tables.jpg
+  tags: 'Google APIs,Visualizations,Data,Database,Spreadsheets,Embeddable'
+- slug: google-sheets
+  name: Google Sheets
+  description: >-
+    Google Sheets is an online spreadsheet app that lets users create and format
+    spreadsheets and simultaneously work with other people. Google Sheets
+    isn&rsquo;t only for consumers: it's used every day by businesses and
+    schools to manage spreadsheet data. With the new Sheets API v4 and Sheets
+    add-ons, that data can be accessed by code as well as users.
+  url: 'https://developers.google.com/sheets/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/google-sheets-icon.png
+  tags: 'Google APIs,Spreadsheets,Data,Documents'
+- slug: salesforce
+  name: Salesforce
+  description: >-
+    Salesforce.com Inc. is a global enterprise software company headquartered in
+    San Francisco, California. Though best known for its customer relationship
+    management (CRM) product, Salesforce has also expanded into the social
+    enterprise arena through acquisitions. It is currently ranked the most
+    innovative company in America by Forbes magazine, as well as number 27 in
+    Fortune's magazine's 100 Best Companies to Work For in 2012. As of April
+    2013, the company is ranked sixth in providing services in marketing and
+    customer service automation
+  url: 'https://developer.salesforce.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/salesforcedevs'
+  blog: 'https://developer.salesforce.com/blogs/'
+  blog_rss: 'http://feeds.feedburner.com/SforceBlog'
+  github: 'https://github.com/salesforce'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/salesforce-logo.png
+  tags: >-
+    Database,Freshbooks,Customer,Hosting,PaaS,Notifications,BaaS,CRM,Sales,Spreadsheets,Partners,Wearables
+- slug: data-everywhere
+  name: Data Everywhere
+  description: >-
+    Highlight and select the cells in your existing spreadsheet and click
+    publish. Our add-in synchronizes your data. Share Data. Now, add this data
+    to your other workbooks. Move or reorganize the source spread sheet without
+    breaking the destination workbooks. No more broken workbook links. Your
+    data, everywhere. Your data will be instantly available in other
+    spreadsheets. Our REST API makes your data available in databases, phones,
+    websites, and other applications.
+  url: 'https://www.dataeverywhere.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/dataeverywhere'
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-everywhere.png
+  tags: 'Data,Spreadsheets'
+- slug: datahero
+  name: DataHero
+  description: >-
+    Datahero helps you unmask the answers in your data. There&rsquo;s nothing to
+    download or install. Simply create an account at www.datahero.com and
+    connect to the data services you use everyday (like Salesforce, Stripe,
+    MailChimp, Dropbox and Box.net). Datahero automatically decodes your data
+    and shows you the answers you need through dynamic visualizations.
+  url: 'https://datahero.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/datahero'
+  blog: 'https://datahero.com/blog/'
+  blog_rss: 'https://datahero.com/blog/feed/'
+  github: 'https://github.com/Datahero'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/datahero_logo.png
+  tags: 'Data,Spreadsheets'
+- slug: ragic
+  name: Ragic
+  description: >-
+    Ragic enables business people without programming skills to create cloud
+    databases just like how they create a spreadsheet form. Ragic focuses on
+    helping companies and teams who have outgrown their Excel files, to move on
+    to a real database solution that can scale in terms of users, data relation,
+    and data size. Users of Ragic are able to build their own database
+    applications without a line of code through a spreadsheet interface, or
+    install from the supplied ready-made database application templates across
+    many business functions.
+  url: 'http://www.ragic.com/'
+  short_url: ''
+  twitter: 'https://twitter.com/Ragic'
+  blog: 'http://www.ragic.com/intl/en/blog'
+  blog_rss: ''
+  github: 'https://github.com/ragic'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/ragic-logo.png
+  tags: 'Data,Database,Forms,Spreadsheets'
+- slug: papa-parse
+  name: Papa Parse
+  description: >-
+    A powerful, in-browser CSV parser for big boys and girls. The world's first
+    multi-threaded CSV parser for the browser. Use Papa when performance,
+    privacy, and correctness matter to you.
+  url: 'http://papaparse.com/'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: 'https://github.com/mholt/PapaParse'
+  image: >-
+    http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/papa-parse.png
+  tags: 'CSV,Excel,Data,Spreadsheets'
