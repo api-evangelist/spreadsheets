@@ -1,0 +1,22 @@
+- slug: diffbotgoogleappsclient
+  name: diffbot-google-apps-client
+  description: A Diffbot API Demo from a Google Apps Spreadsheet
+  url: 'https://github.com/diffbot/diffbot-google-apps-client'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github.png'
+  tags: 'Scraping,SDK,Spreadsheets'
+- slug: diffbotexcelclient
+  name: diffbot-excel-client
+  description: Using Diffbot from Microsoft Excel
+  url: 'https://github.com/diffbot/diffbot-excel-client'
+  short_url: ''
+  twitter: ''
+  blog: ''
+  blog_rss: ''
+  github: ''
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github.png'
+  tags: 'Scraping,SDK,Spreadsheets'
