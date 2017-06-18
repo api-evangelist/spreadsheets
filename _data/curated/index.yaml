@@ -1,2 +1,473 @@
---- []
+---
+- curated_id: 1dcfcb440332a561ef582141585da90c
+  item_date: "2015-01-23 00:00:00"
+  title: More features to work with Spreadsheet documents are now available in Aspose
+    for Cloud Ruby SDK
+  url: http://www.aspose.com/blogs/index.php
+  domain: www.aspose.com
+  image: ""
+- curated_id: 37fafe53acf6cbdb3acdcf14045d0785
+  item_date: "2015-02-27 00:00:00"
+  title: Spreadsheets for life
+  url: http://flowingdata.com/2015/02/27/spreadsheets-for-life/
+  domain: flowingdata.com
+  image: ""
+- curated_id: a7ffa6e1396ec7c417f4bd002f371460
+  item_date: "2015-03-03 00:00:00"
+  title: Move over spreadsheets, here come dashboards
+  url: http://www.desk.com/blog/move-over-spreadsheets-here-come-dashboards
+  domain: www.desk.com
+  image: ""
+- curated_id: d1f54c0ca263ca14115e842cf6f3c0ac
+  item_date: "2015-03-12 00:00:00"
+  title: How to Use the SEMrush API in Google Sheets
+  url: https://www.semrush.com/blog/use-semrush-api-google-sheets/
+  domain: www.semrush.com
+  image: ""
+- curated_id: ed51ad2a071f13f4e0d7d82c963ed29e
+  item_date: "2015-03-13 11:43:58"
+  title: API2Analyst // export
+  url: http://apps.fedapi.io/api2analyst-export/
+  domain: apps.fedapi.io
+  image: ""
+- curated_id: f3255fcf846e40b72b4507bb160f44b3
+  item_date: "2015-03-13 11:57:39"
+  title: ""
+  url: https://github.com/VBA-tools/VBA-Web
+  domain: github.com
+  image: ""
+- curated_id: a593e57a27e70eef8c73bdf62ac234df
+  item_date: "2015-03-16 21:51:03"
+  title: SpreadCloud
+  url: http://spreadcloud.com/
+  domain: spreadcloud.com
+  image: ""
+- curated_id: c2187d60de7e964661910130ef9ff582
+  item_date: "2015-03-25 00:00:00"
+  title: CloudFront Reporting Update ? New Device Report, CSV, Integration, and More
+  url: https://aws.amazon.com/blogs/aws/cloudfront-reporting-update-new-device-report-csv-integration-and-more/
+  domain: aws.amazon.com
+  image: ""
+- curated_id: 3a4cc406a62b9960d541c76be6a35c0b
+  item_date: "2015-03-26 00:00:00"
+  title: Sharing the Silk Data Handbook
+  url: http://blog.silk.co/post/114658890792/sharing-the-silk-data-handbook
+  domain: blog.silk.co
+  image: ""
+- curated_id: 68b718289b90686720e8714bcb83149a
+  item_date: "2015-03-26 20:23:51"
+  title: 'The API Briefing: Free Federal Energy and Economic Information Delivered
+    Straight to Your Spreadsheet'
+  url: http://www.digitalgov.gov/2015/03/25/the-api-briefing-free-federal-energy-and-economic-information-delivered-straight-to-your-spreadsheet/
+  domain: www.digitalgov.gov
+  image: ""
+- curated_id: 8b14c73208d86031a8102db0a9ca8317
+  item_date: "2015-03-31 00:00:00"
+  title: An Online Spreadsheet in C# .net (Cloud SaaS)
+  url: http://www.codeproject.com/Articles/892137/An-Online-Spreadsheet-in-Csharp-net-Cloud-SaaS
+  domain: www.codeproject.com
+  image: ""
+- curated_id: b3faa625ae2bf64f02453be5572fabd2
+  item_date: "2015-04-02 11:13:22"
+  title: Blockspring for Google Sheets ? Blockspring
+  url: https://api.blockspring.com/blog/blockspring-for-google-sheets
+  domain: api.blockspring.com
+  image: ""
+- curated_id: 4ac8ed5aafb948972cd107b065d12429
+  item_date: "2015-04-14 00:00:00"
+  title: Printing Out Spreadsheet Cell Values by (Hierarchical) Column Using pandas
+  url: http://blog.ouseful.info/2015/04/14/printing-out-spreadsheet-cell-values-by-hierarchical-column-using-pandas/
+  domain: blog.ouseful.info
+  image: ""
+- curated_id: aa62f46ab0f10844e4dc395e41e06959
+  item_date: "2015-04-23 00:00:00"
+  title: Docs, Sheets and Forms add-ons now open to all developers
+  url: http://googleappsdeveloper.blogspot.com/2015/04/docs-sheets-and-forms-add-ons-now-open.html
+  domain: googleappsdeveloper.blogspot.com
+  image: ""
+- curated_id: 686c801ce3b5df4c07de004dd00b6565
+  item_date: "2015-04-28 07:11:04"
+  title: ""
+  url: https://github.com/censusreporter/census-api/blob/master/API.md
+  domain: github.com
+  image: ""
+- curated_id: f63fa614b4fc74e9bbcc30fc990c76e7
+  item_date: "2015-05-04 00:00:00"
+  title: Blockspring Turns Google Sheets Into Client For Any API
+  url: http://www.programmableweb.com/news/blockspring-turns-google-sheets-client-any-api/2015/05/04
+  domain: www.programmableweb.com
+  image: ""
+- curated_id: b44c007f2085ec752d40dfe4123189d7
+  item_date: "2015-05-16 00:00:00"
+  title: Excel added as a bulk order option
+  url: http://www.fakenamegenerator.com/blog/2015/05/excel-added-as-a-bulk-order-option/
+  domain: www.fakenamegenerator.com
+  image: ""
+- curated_id: 6c74597b97d131f4d8032b45943805bb
+  item_date: "2015-06-08 00:00:00"
+  title: Spreadsheets to insights in 5 minutes
+  url: http://blog.getdataseed.com/post/121022225272/spreadsheets-to-insights-in-5-minutes#_=_
+  domain: blog.getdataseed.com
+  image: ""
+- curated_id: f17f01fe071f513260065e6b9d9ed599
+  item_date: "2015-06-12 00:00:00"
+  title: International Currencies in BOM Tool
+  url: https://blog.octopart.com/archives/2015/06/international-currencies-in-bom-tool
+  domain: blog.octopart.com
+  image: ""
+- curated_id: f4fbce5d8f1535bf1ffe6d7e2407bbf3
+  item_date: "2015-06-15 00:00:00"
+  title: Google Sheets gets data labels, customizable data points, and advanced filtering
+  url: http://venturebeat.com/2015/06/15/google-sheets-gets-data-labels-customizable-data-points-and-advanced-filtering/
+  domain: venturebeat.com
+  image: ""
+- curated_id: 13876984039fea1958a59e9e2f990403
+  item_date: "2015-06-15 00:00:00"
+  title: Google Sheets updated with data analysis, visualization tools
+  url: http://www.zdnet.com/article/google-sheets-updated-with-data-analysis-visualization-tools/#ftag=RSSbaffb68
+  domain: www.zdnet.com
+  image: ""
+- curated_id: 778c2ebe6fbc95954365e9c1db47a2b2
+  item_date: "2015-06-15 00:00:00"
+  title: Google Sheets updates charting, filtering and pivoting features to take on
+    Excel
+  url: http://thenextweb.com/google/2015/06/15/google-sheets-updates-charting-filtering-and-pivoting-features-to-take-on-excel/
+  domain: thenextweb.com
+  image: ""
+- curated_id: d609715baf55824bf384b98b831e42aa
+  item_date: "2015-06-15 15:16:02"
+  title: Google Sheets updated with data analysis, visualization tools
+  url: http://www.zdnet.com/article/google-sheets-updated-with-data-analysis-visualization-tools/
+  domain: www.zdnet.com
+  image: ""
+- curated_id: a2bada9587e751926bc10daa1cb1e077
+  item_date: "2015-06-22 00:00:00"
+  title: Excel heat map hack
+  url: http://flowingdata.com/2015/06/22/excel-heat-map-hack/
+  domain: flowingdata.com
+  image: ""
+- curated_id: e13e380c536ca1557d434d22ace5a107
+  item_date: "2015-06-30 00:00:00"
+  title: Pull Catchpoint Data into Google Docs with new API
+  url: http://blog.catchpoint.com/2015/06/30/api-google-docs/
+  domain: blog.catchpoint.com
+  image: ""
+- curated_id: 7673aa2f9ffee29dfec3d44fe18eaf0d
+  item_date: "2015-06-30 00:00:00"
+  title: This Excel tool lets you see trends in large data sets
+  url: http://www.businessinsider.com/use-pivot-charts-excel-2015-6
+  domain: www.businessinsider.com
+  image: ""
+- curated_id: 7ea0e2e6596cdea738e7cf7a663aed17
+  item_date: "2015-06-30 12:18:08"
+  title: Text Analysis blog | Aylien ? AYLIEN and Blockspring a match made in API
+    heaven
+  url: http://blog.aylien.com/post/122498410238/aylien-and-blockspring-a-match-made-in-api-heaven
+  domain: blog.aylien.com
+  image: ""
+- curated_id: 862c95b77945dccfe664f8b5488280b4
+  item_date: "2015-07-08 00:00:00"
+  title: How to Prepare an Excel Spreadsheet for Data Visualizations and Visual Analysis
+  url: http://blog.silk.co/post/123576055557/how-to-prepare-an-excel-spreadsheet-for-data#_=_
+  domain: blog.silk.co
+  image: ""
+- curated_id: 838e37f26d56d4012dfe3e3c617a8ace
+  item_date: "2015-07-08 00:00:00"
+  title: Paste your spreadsheet directly into Silk
+  url: http://blog.silk.co/post/123546889382/paste-your-spreadsheet-directly-into-silk#_=_
+  domain: blog.silk.co
+  image: ""
+- curated_id: eff4817f720949b35ba2a9c5784d7949
+  item_date: "2015-07-10 20:38:28"
+  title: switzersc/api-in-a-box
+  url: https://github.com/switzersc/api-in-a-box
+  domain: github.com
+  image: ""
+- curated_id: 180158f1d66f259ce7c181b84ad15e41
+  item_date: "2015-07-11 00:00:00"
+  title: 'New in Smartsheet: Critical Path and Duration in Minutes, Hours, and Weeks'
+  url: https://www.smartsheet.com/blog/new-smartsheet-critical-path-and-duration-minutes-hours-and-weeks
+  domain: www.smartsheet.com
+  image: ""
+- curated_id: a6d4a1067e2306044840c3f845c73ad7
+  item_date: "2015-08-21 00:00:00"
+  title: New Collaboration Options for the BOM Tool
+  url: https://blog.octopart.com/archives/2015/08/new-collaboration-options-for-the-bom-tool
+  domain: blog.octopart.com
+  image: ""
+- curated_id: e2bc493d2d10ea8c9a49102ca73b0059
+  item_date: "2015-09-11 00:00:00"
+  title: 'Presentation: Spreadsheets for Developers'
+  url: https://www.infoq.com/presentations/spreadsheets
+  domain: www.infoq.com
+  image: ""
+- curated_id: 8ba06426ebccf7e68820c63277828b45
+  item_date: "2015-09-24 00:00:00"
+  title: Export Wordpress Data to EXCEL or CSV file (Utilities)
+  url: http://codecanyon.net/item/export-wordpress-data-to-excel-or-csv-file/12956261
+  domain: codecanyon.net
+  image: ""
+- curated_id: f84be9b9eb5566f20ec9b7385369b9e2
+  item_date: "2015-10-19 00:00:00"
+  title: 'Not Just for Numbers: The Smart Spreadsheet Takeover'
+  url: https://www.smartsheet.com/blog/smart-spreadsheet-takeover
+  domain: www.smartsheet.com
+  image: ""
+- curated_id: 6e293e2b74cc62e9504ec9b51a3cf8f0
+  item_date: "2016-01-28 00:00:00"
+  title: Using Spreadsheets That Generate Textual Summaries of Data
+  url: http://blog.ouseful.info/2016/01/28/using-spreadsheets-that-generate-textual-summaries-of-data-hscic/
+  domain: blog.ouseful.info
+  image: ""
+- curated_id: 3c53e23236f4fd37a8ee42570343937b
+  item_date: "2016-02-12 00:00:00"
+  title: How to Create a Gantt Chart in Excel
+  url: https://www.smartsheet.com/blog/gantt-chart-excel01
+  domain: www.smartsheet.com
+  image: ""
+- curated_id: 1d2296d0dc376118ecda136f5fdbdae9
+  item_date: "2016-02-17 00:00:00"
+  title: Integrate Smartsheet With Flow XO
+  url: http://blog.flowxo.com/integrate-smartsheet-with-flow-xo/
+  domain: blog.flowxo.com
+  image: ""
+- curated_id: bb5c9eae5ec14840582c5029e2f3d27c
+  item_date: "2016-02-18 00:00:00"
+  title: 'Silk + Google Sheet Sync: Automatically Updated Data Visualizations Every
+    Hour'
+  url: http://blog.silk.co/post/139540224442/silk-google-sheet-sync-automatically-updated#_=_
+  domain: blog.silk.co
+  image: ""
+- curated_id: e2cfbb033fff7dedec0f1ef1e829320a
+  item_date: "2016-02-29 00:00:00"
+  title: 'The Google Analytics Add-On for Sheets: An Intro to an Underutilized Tool'
+  url: https://moz.com/blog/intro-google-analytics-add-on-for-sheets
+  domain: moz.com
+  image: ""
+- curated_id: 34b439a844f9c758b5e1e57a114397e9
+  item_date: "2016-03-08 00:00:00"
+  title: Spreadsheets to Platinum Partner at breakneck speed
+  url: https://www.xero.com/blog/2016/03/spreadsheets-to-platinum-partner-at-breakneck-speed/
+  domain: www.xero.com
+  image: ""
+- curated_id: 0cad7b7fb54d2958bde5715995850739
+  item_date: "2016-03-14 00:00:00"
+  title: Introducing the PowerShell Excel Module
+  url: https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/25/introducing-the-powershell-excel-module-2/
+  domain: blogs.technet.microsoft.com
+  image: ""
+- curated_id: 601b1236b11163867990a399d1c801ac
+  item_date: "2016-03-18 11:32:10"
+  title: EtherCalc
+  url: https://ethercalc.net/
+  domain: ethercalc.net
+  image: ""
+- curated_id: 5bce459a960c260f6d9010346a9cbce2
+  item_date: "2016-03-22 00:00:00"
+  title: Connection Error While Running Simple ETL Process With Excel using SSIS
+  url: http://www.codeproject.com/Tips/1087399/Connection-Error-While-Running-Simple-ETL-Process
+  domain: www.codeproject.com
+  image: ""
+- curated_id: c603ceaa0294ea95a14c0aba53942a3c
+  item_date: "2016-03-24 00:00:00"
+  title: How to export your LinkedIn contacts to a spreadsheet and import them into
+    OnePageCRM
+  url: https://www.onepagecrm.com/blog/getting-linkedin-contacts-onepagecrm-bulk
+  domain: www.onepagecrm.com
+  image: ""
+- curated_id: ef9ee31780c277250c5ba66c94757a7b
+  item_date: "2016-03-28 00:00:00"
+  title: March 2016 - Smartsheet API 2.0 update
+  url: https://www.smartsheet.com/blog/march-2016-smartsheet-api-20-update
+  domain: www.smartsheet.com
+  image: ""
+- curated_id: 75281270a56738ecb8ac28c61b24570c
+  item_date: "2016-03-29 08:15:26"
+  title: 'Google Sheets 101: The Beginners Guide to Online Spreadsheets'
+  url: https://zapier.com/blog/google-sheets-tutorial/
+  domain: zapier.com
+  image: ""
+- curated_id: 55df492c618d4484746373160ac8784a
+  item_date: "2016-04-02 17:42:32"
+  title: How to import  JSON data into Google Spreadsheets in less than 5 minutes
+  url: https://medium.com/@paulgambill/how-to-import-json-data-into-google-spreadsheets-in-less-than-5-minutes-a3fede1a014a#.912yucixt
+  domain: medium.com
+  image: ""
+- curated_id: 5f905dd4f55c30ee90d9b6159b2c4137
+  item_date: "2016-04-05 00:00:00"
+  title: Importing and Exporting Google Spreadsheets With Treasure Data
+  url: https://dzone.com/articles/importing-and-exporting-google-spreadsheets-with-t
+  domain: dzone.com
+  image: ""
+- curated_id: 183e97783e2141a64201bf8f44869d27
+  item_date: "2016-04-09 00:00:00"
+  title: Azurepath ? Turn your existing spreadsheet into immediate insights.
+  url: https://www.azurepath.com/
+  domain: www.azurepath.com
+  image: ""
+- curated_id: acdea102555df1b932b10791c436b35c
+  item_date: "2016-04-11 00:00:00"
+  title: Load CSV Data into Couchbase using Apache Spark
+  url: https://dzone.com/articles/load-csv-data-into-couchbase-using-apache-spark
+  domain: dzone.com
+  image: ""
+- curated_id: a3728a881b9de4bc94c460c6bc3ad9f6
+  item_date: "2016-04-15 00:00:00"
+  title: Making Google Sheets Smarter with Blockspring
+  url: https://dzone.com/articles/making-google-sheets-smarter-with-blockspring
+  domain: dzone.com
+  image: ""
+- curated_id: 148f5d4ead35cd9a79db8862b2e7ba8a
+  item_date: "2016-04-29 00:00:00"
+  title: How To Export Website Content To Excel
+  url: https://www.magnolia-cms.com/blogs/teresa-miyar/detail~@import@how-to-export-website-content-to-excel.html~.html
+  domain: www.magnolia-cms.com
+  image: ""
+- curated_id: 95b251a6335f3e28e25c491eab5d6f4c
+  item_date: "2016-05-02 00:00:00"
+  title: 'From spreadsheet to API to app: A better contract forecasting tool'
+  url: https://18f.gsa.gov/2016/05/02/from-spreadsheet-to-api-to-app-a-better-contract-forecast-tool/
+  domain: 18f.gsa.gov
+  image: ""
+- curated_id: 68499e886f04c30d1b90ac9f0ef9399a
+  item_date: "2016-05-10 00:00:00"
+  title: 'Sentiment Analysis in Excel: getting started'
+  url: https://www.meaningcloud.com/blog/sentiment-analysis-excel-getting-started
+  domain: www.meaningcloud.com
+  image: ""
+- curated_id: 1c173539d1b31d103758e1e77471e77b
+  item_date: "2016-05-19 00:00:00"
+  title: Google Sheets and Slides Earn New APIs
+  url: http://www.programmableweb.com/news/google-sheets-and-slides-earn-new-apis/2016/05/19
+  domain: www.programmableweb.com
+  image: ""
+- curated_id: 340d162ead8ada1a3d822747872016c6
+  item_date: "2016-06-11 00:00:00"
+  title: 'Presentation: APIs, Spreadsheets  Drinking Fountains: Using Open Data in
+    Real Life'
+  url: https://www.infoq.com/presentations/government-open-data-api
+  domain: www.infoq.com
+  image: ""
+- curated_id: 2d3afc6570041007f4d15ca90162a48b
+  item_date: "2016-06-16 00:00:00"
+  title: 'Introducing the Google Sheets API v4: Transferring data from a SQL database
+    to a Sheet'
+  url: https://developers.googleblog.com/2016/06/introducing-google-sheets-api-v4.html
+  domain: developers.googleblog.com
+  image: ""
+- curated_id: 61f24ca69a31d1bf05f18bb26fcaa5dc
+  item_date: "2016-06-21 00:00:00"
+  title: EIA Google Sheets Add-on Expands User Capability
+  url: https://www.meritalk.com/articles/eia-google-sheets-add-on-expands-user-capability/
+  domain: www.meritalk.com
+  image: ""
+- curated_id: e5bc2ee12e6e545f4d6aa121535297c0
+  item_date: "2016-06-29 00:00:00"
+  title: 50 Google Sheets Add-Ons to Supercharge Your Spreadsheets
+  url: https://zapier.com/blog/best-google-sheets-addons/
+  domain: zapier.com
+  image: ""
+- curated_id: ce8bfeddfe52f0cee22d3c347d7226e8
+  item_date: "2016-08-03 00:00:00"
+  title: Microsoft?s Excel API, which lets developers access data stored in spreadsheets,
+    hits general availability
+  url: https://techcrunch.com/2016/08/03/microsofts-excel-api-which-lets-developers-access-data-stored-in-spreadsheets-hits-general-availability/
+  domain: techcrunch.com
+  image: ""
+- curated_id: d1acfb918443d01584d336a05f1948e8
+  item_date: "2016-08-04 00:00:00"
+  title: Microsoft launches Excel API to let developers embed number-crunching functionality
+    in their apps
+  url: http://siliconangle.com/blog/2016/08/04/microsoft-launches-excel-api-to-let-developers-embed-number-crunching-functionality-in-their-apps/
+  domain: siliconangle.com
+  image: ""
+- curated_id: 4afafe0877d541bfbc65d5d038c45971
+  item_date: "2016-08-04 08:10:07"
+  title: Announcing the general availability of the Microsoft Excel API to expand
+    the power of Office 365
+  url: https://blogs.office.com/2016/08/03/announcing-the-general-availability-of-the-microsoft-excel-api-to-expand-the-power-of-office-365/
+  domain: blogs.office.com
+  image: ""
+- curated_id: bf92c80d1f6683c7289a0a2c73303850
+  item_date: "2016-08-08 00:00:00"
+  title: Microsoft#039;s Excel API Now Generally Available
+  url: http://www.programmableweb.com/news/microsofts-excel-api-now-generally-available/brief/2016/08/08
+  domain: www.programmableweb.com
+  image: ""
+- curated_id: 3f64d48a01c18be1eb6223cee0397c3e
+  item_date: "2016-08-11 00:00:00"
+  title: Enhanced third-party access protection for Google Sheets
+  url: http://googleappsdeveloper.blogspot.com/2016/08/enhanced-third-party-access-protection.html
+  domain: googleappsdeveloper.blogspot.com
+  image: ""
+- curated_id: 272ec7991cf6ca2d57abebc33c3c4c64
+  item_date: "2016-08-17 00:00:00"
+  title: BigML for Google Sheets Endorsed as Outstanding Add-on
+  url: https://blog.bigml.com/2016/08/17/bigml-for-google-sheets-endorsed-as-outstanding-add-on/
+  domain: blog.bigml.com
+  image: ""
+- curated_id: e496edbebb2e6a5826bba3b84355acd2
+  item_date: "2016-08-23 00:00:00"
+  title: Work in real-time with presence for documents and spreadsheets
+  url: https://quip.com/blog/presence-for-documents-spreadsheets
+  domain: quip.com
+  image: ""
+- curated_id: c541e81f75938fe9d7d1cfd29163d6d1
+  item_date: "2016-09-29 00:00:00"
+  title: 'Introducing the Google Sheets API v4: Transferring data from a SQL database
+    to a Sheet'
+  url: https://gsuite-developers.googleblog.com/2016/06/introducing-google-sheets-api-v4.html
+  domain: gsuite-developers.googleblog.com
+  image: ""
+- curated_id: d55043ae6d8ea8d7d02aaf1dfc2579c2
+  item_date: "2016-10-17 00:00:00"
+  title: How to Use Search Analytics in Google Sheets for Better SEO Insights
+  url: https://moz.com/blog/how-to-use-search-analytics-in-google-sheets-for-better-seo-insights
+  domain: moz.com
+  image: ""
+- curated_id: b31b3d5978e57a87066b36cedb6106ac
+  item_date: "2016-12-15 00:00:00"
+  title: Patent Issued for Interaction between Web Gadgets and Spreadsheets
+  url: https://www.equities.com/news/patent-issued-for-interaction-between-web-gadgets-and-spreadsheets-uspto-9514116
+  domain: www.equities.com
+  image: ""
+- curated_id: b67d267aa1be5b2d29d0fd1f79347b18
+  item_date: "2016-12-29 00:00:00"
+  title: Using Apache POI to Convert Excel to an Elasticsearch Compatible JSON
+  url: https://dzone.com/articles/using-apache-poi-to-convert-excel-to-an-elasticsea
+  domain: dzone.com
+  image: ""
+- curated_id: 6aab04d9e2b6fab68d8797b49023cc2e
+  item_date: "2017-02-16 00:00:00"
+  title: How to Uncover Hidden Keyword-Level Data Using Google Sheets
+  url: https://moz.com/blog/how-to-uncover-hidden-keyword-level-data-using-google-sheets
+  domain: moz.com
+  image: ""
+- curated_id: 45c3942e06b1193676134d7e254e38a1
+  item_date: "2017-02-17 14:10:55"
+  title: "Tweet: Read, write, and delete data from a Google Spreadsheet with just
+    a few lines of #Python. \nhttps://t.co/qgy4pBxi8p https://t.co/2TsIDIr4l5"
+  url: https://twitter.com/twilio/statuses/832713965566201857
+  domain: twitter.com
+  image: ""
+- curated_id: 3c1712cc5a702e9b26fea644d02a2d17
+  item_date: "2017-03-24 00:00:00"
+  title: Using Google Sheets and Runscope to Run API Tests with Multiple Variable
+    Sets
+  url: https://blog.runscope.com/posts/using-google-sheets-and-runscope-to-run-api-tests-with-multiple-variable-sets
+  domain: blog.runscope.com
+  image: ""
+- curated_id: 402b7911ed8f8b942e11d36ab7c8da1a
+  item_date: "2017-04-13 00:00:00"
+  title: Using Google Sheets filters in Add-ons with Google Apps Script
+  url: https://gsuite-developers.googleblog.com/2017/04/using-google-sheets-filters-in-add-ons.html
+  domain: gsuite-developers.googleblog.com
+  image: ""
+- curated_id: d9e1128666bbed49e2d93813e1ff415f
+  item_date: "2017-05-04 05:09:02"
+  title: When youre prototyping, you might not need a fully fleshed out database.
+    Try out Google Spreadsheets .NET Core.
+  url: https://www.twilio.com/blog/2017/03/google-spreadsheets-and-net-core.html
+  domain: www.twilio.com
+  image: ""
 ...
