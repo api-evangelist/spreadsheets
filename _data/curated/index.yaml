@@ -121,6 +121,13 @@
   url: https://blog.octopart.com/archives/2015/06/international-currencies-in-bom-tool
   domain: blog.octopart.com
   image: ""
+- curated_id: 778c2ebe6fbc95954365e9c1db47a2b2
+  item_date: "2015-06-15 00:00:00"
+  title: Google Sheets updates charting, filtering and pivoting features to take on
+    Excel
+  url: http://thenextweb.com/google/2015/06/15/google-sheets-updates-charting-filtering-and-pivoting-features-to-take-on-excel/
+  domain: thenextweb.com
+  image: ""
 - curated_id: f4fbce5d8f1535bf1ffe6d7e2407bbf3
   item_date: "2015-06-15 00:00:00"
   title: Google Sheets gets data labels, customizable data points, and advanced filtering
@@ -132,13 +139,6 @@
   title: Google Sheets updated with data analysis, visualization tools
   url: http://www.zdnet.com/article/google-sheets-updated-with-data-analysis-visualization-tools/#ftag=RSSbaffb68
   domain: www.zdnet.com
-  image: ""
-- curated_id: 778c2ebe6fbc95954365e9c1db47a2b2
-  item_date: "2015-06-15 00:00:00"
-  title: Google Sheets updates charting, filtering and pivoting features to take on
-    Excel
-  url: http://thenextweb.com/google/2015/06/15/google-sheets-updates-charting-filtering-and-pivoting-features-to-take-on-excel/
-  domain: thenextweb.com
   image: ""
 - curated_id: d609715baf55824bf384b98b831e42aa
   item_date: "2015-06-15 15:16:02"
@@ -152,17 +152,17 @@
   url: http://flowingdata.com/2015/06/22/excel-heat-map-hack/
   domain: flowingdata.com
   image: ""
-- curated_id: 7673aa2f9ffee29dfec3d44fe18eaf0d
-  item_date: "2015-06-30 00:00:00"
-  title: This Excel tool lets you see trends in large data sets
-  url: http://www.businessinsider.com/use-pivot-charts-excel-2015-6
-  domain: www.businessinsider.com
-  image: ""
 - curated_id: e13e380c536ca1557d434d22ace5a107
   item_date: "2015-06-30 00:00:00"
   title: Pull Catchpoint Data into Google Docs with new API
   url: http://blog.catchpoint.com/2015/06/30/api-google-docs/
   domain: blog.catchpoint.com
+  image: ""
+- curated_id: 7673aa2f9ffee29dfec3d44fe18eaf0d
+  item_date: "2015-06-30 00:00:00"
+  title: This Excel tool lets you see trends in large data sets
+  url: http://www.businessinsider.com/use-pivot-charts-excel-2015-6
+  domain: www.businessinsider.com
   image: ""
 - curated_id: 7ea0e2e6596cdea738e7cf7a663aed17
   item_date: "2015-06-30 12:18:08"
@@ -171,16 +171,16 @@
   url: http://blog.aylien.com/post/122498410238/aylien-and-blockspring-a-match-made-in-api-heaven
   domain: blog.aylien.com
   image: ""
-- curated_id: 862c95b77945dccfe664f8b5488280b4
-  item_date: "2015-07-08 00:00:00"
-  title: How to Prepare an Excel Spreadsheet for Data Visualizations and Visual Analysis
-  url: http://blog.silk.co/post/123576055557/how-to-prepare-an-excel-spreadsheet-for-data#_=_
-  domain: blog.silk.co
-  image: ""
 - curated_id: 838e37f26d56d4012dfe3e3c617a8ace
   item_date: "2015-07-08 00:00:00"
   title: Paste your spreadsheet directly into Silk
   url: http://blog.silk.co/post/123546889382/paste-your-spreadsheet-directly-into-silk#_=_
+  domain: blog.silk.co
+  image: ""
+- curated_id: 862c95b77945dccfe664f8b5488280b4
+  item_date: "2015-07-08 00:00:00"
+  title: How to Prepare an Excel Spreadsheet for Data Visualizations and Visual Analysis
+  url: http://blog.silk.co/post/123576055557/how-to-prepare-an-excel-spreadsheet-for-data#_=_
   domain: blog.silk.co
   image: ""
 - curated_id: eff4817f720949b35ba2a9c5784d7949
@@ -475,5 +475,48 @@
     Try out Google Spreadsheets .NET Core.
   url: https://www.twilio.com/blog/2017/03/google-spreadsheets-and-net-core.html
   domain: www.twilio.com
+  image: ""
+- curated_id: Xne8uW/IUiZhV1EuO2ZMzIrc2Ak6NlhGjboZ+Yk0rJ8=_15c3a428202:3688c4:ac928dde
+  item_date: "2017-05-24 04:40:24"
+  title: Collaboration platform Smartsheet nabs $52M at $800M valuation
+  url: http://techcrunch.com/?p=1495038
+  domain: techcrunch.com
+  image: ""
+- curated_id: aTKLPW9AeQAh09DpOW/0/mK2tQUNNgIyAi3xy7MVsb4=_15c5567aa64:4c73dbe:cfb784e9
+  item_date: "2017-05-29 11:09:24"
+  title: Fieldbook Review (Pricing, Features & Alternatives)
+  url: https://zapier.com/zapbook/fieldbook/review/
+  domain: zapier.com
+  image: ""
+- curated_id: PSNTZO8gXFUe+cpCZyApw0vEKWPT4b14D6teBEocIAE=_15c64a0a29c:63fa2fd:1980c846
+  item_date: "2017-06-01 10:00:03"
+  title: Google Sheets is making it easier to create charts through natural language
+    commands
+  url: https://www.theverge.com/2017/6/1/15724970/google-sheets-update-charts-explore-sync-data
+  domain: www.theverge.com
+  image: ""
+- curated_id: Xne8uW/IUiZhV1EuO2ZMzIrc2Ak6NlhGjboZ+Yk0rJ8=_15c649aa862:26d9cd:7c63ad1c
+  item_date: "2017-06-01 10:00:35"
+  title: Google Sheets now uses machine learning to help you visualize your data
+  url: http://techcrunch.com/?p=1498237
+  domain: techcrunch.com
+  image: ""
+- curated_id: 20tAExShAQEEUCMDXqXKkXAKdXMeA9Rvcav680eAk4I=_15c88e1f7c4:e1b8c4:28ce9b86
+  item_date: "2017-06-08 11:00:45"
+  title: Google Sheets + Algorithmia = Machine Learning Spreadsheets
+  url: https://blog.algorithmia.com/?p=7409
+  domain: blog.algorithmia.com
+  image: ""
+- curated_id: JA1HSQatpPXQxCQ4ABRR78b1Bv2C04PJrJczJ3cK8JA=_15ca200714e:30c2ab5:e55a4d93
+  item_date: "2017-06-13 08:00:00"
+  title: Ditch the Big Ass Spreadsheet with Continuous Security Compliance
+  url: https://www.darkreading.com/partner-perspectives/evidentio/ditch-the-big-ass-spreadsheet-with-continuous-security-compliance-/a/d-id/1329106
+  domain: www.darkreading.com
+  image: ""
+- curated_id: aTKLPW9AeQAh09DpOW/0/mK2tQUNNgIyAi3xy7MVsb4=_15cce11c6dd:f81454:fe3a8465
+  item_date: "2017-06-21 10:31:36"
+  title: How to Import Data from Any Web Page into Google Sheets with ImportXML
+  url: https://zapier.com/blog/google-sheets-importxml-guide/
+  domain: zapier.com
   image: ""
 ...
