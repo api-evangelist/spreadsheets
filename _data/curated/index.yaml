@@ -121,6 +121,12 @@
   url: https://blog.octopart.com/archives/2015/06/international-currencies-in-bom-tool
   domain: blog.octopart.com
   image: ""
+- curated_id: f4fbce5d8f1535bf1ffe6d7e2407bbf3
+  item_date: "2015-06-15 00:00:00"
+  title: Google Sheets gets data labels, customizable data points, and advanced filtering
+  url: http://venturebeat.com/2015/06/15/google-sheets-gets-data-labels-customizable-data-points-and-advanced-filtering/
+  domain: venturebeat.com
+  image: ""
 - curated_id: 13876984039fea1958a59e9e2f990403
   item_date: "2015-06-15 00:00:00"
   title: Google Sheets updated with data analysis, visualization tools
@@ -134,12 +140,6 @@
   url: http://thenextweb.com/google/2015/06/15/google-sheets-updates-charting-filtering-and-pivoting-features-to-take-on-excel/
   domain: thenextweb.com
   image: ""
-- curated_id: f4fbce5d8f1535bf1ffe6d7e2407bbf3
-  item_date: "2015-06-15 00:00:00"
-  title: Google Sheets gets data labels, customizable data points, and advanced filtering
-  url: http://venturebeat.com/2015/06/15/google-sheets-gets-data-labels-customizable-data-points-and-advanced-filtering/
-  domain: venturebeat.com
-  image: ""
 - curated_id: d609715baf55824bf384b98b831e42aa
   item_date: "2015-06-15 15:16:02"
   title: Google Sheets updated with data analysis, visualization tools
@@ -152,17 +152,17 @@
   url: http://flowingdata.com/2015/06/22/excel-heat-map-hack/
   domain: flowingdata.com
   image: ""
-- curated_id: 7673aa2f9ffee29dfec3d44fe18eaf0d
-  item_date: "2015-06-30 00:00:00"
-  title: This Excel tool lets you see trends in large data sets
-  url: http://www.businessinsider.com/use-pivot-charts-excel-2015-6
-  domain: www.businessinsider.com
-  image: ""
 - curated_id: e13e380c536ca1557d434d22ace5a107
   item_date: "2015-06-30 00:00:00"
   title: Pull Catchpoint Data into Google Docs with new API
   url: http://blog.catchpoint.com/2015/06/30/api-google-docs/
   domain: blog.catchpoint.com
+  image: ""
+- curated_id: 7673aa2f9ffee29dfec3d44fe18eaf0d
+  item_date: "2015-06-30 00:00:00"
+  title: This Excel tool lets you see trends in large data sets
+  url: http://www.businessinsider.com/use-pivot-charts-excel-2015-6
+  domain: www.businessinsider.com
   image: ""
 - curated_id: 7ea0e2e6596cdea738e7cf7a663aed17
   item_date: "2015-06-30 12:18:08"
@@ -171,16 +171,16 @@
   url: http://blog.aylien.com/post/122498410238/aylien-and-blockspring-a-match-made-in-api-heaven
   domain: blog.aylien.com
   image: ""
-- curated_id: 862c95b77945dccfe664f8b5488280b4
-  item_date: "2015-07-08 00:00:00"
-  title: How to Prepare an Excel Spreadsheet for Data Visualizations and Visual Analysis
-  url: http://blog.silk.co/post/123576055557/how-to-prepare-an-excel-spreadsheet-for-data#_=_
-  domain: blog.silk.co
-  image: ""
 - curated_id: 838e37f26d56d4012dfe3e3c617a8ace
   item_date: "2015-07-08 00:00:00"
   title: Paste your spreadsheet directly into Silk
   url: http://blog.silk.co/post/123546889382/paste-your-spreadsheet-directly-into-silk#_=_
+  domain: blog.silk.co
+  image: ""
+- curated_id: 862c95b77945dccfe664f8b5488280b4
+  item_date: "2015-07-08 00:00:00"
+  title: How to Prepare an Excel Spreadsheet for Data Visualizations and Visual Analysis
+  url: http://blog.silk.co/post/123576055557/how-to-prepare-an-excel-spreadsheet-for-data#_=_
   domain: blog.silk.co
   image: ""
 - curated_id: eff4817f720949b35ba2a9c5784d7949
