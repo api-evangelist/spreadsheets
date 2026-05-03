@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sheets.googleapis.com/schemas/spreadsheet",
+  "title": "Google Spreadsheet",
+  "description": "Schema for a Google Spreadsheet resource, including its properties and sheets.",
+  "type": "object",
+  "properties": {
+    "spreadsheetId": {
+      "type": "string",
+      "description": "The unique ID of the spreadsheet",
+      "examples": ["1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"]
+    },
+    "spreadsheetUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL to open the spreadsheet in Google Sheets"
+    },
+    "properties": {
+      "type": "object",
+      "description": "Overall properties of the spreadsheet",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the spreadsheet"
+        },
+        "locale": {
+          "type": "string",
+          "description": "The locale of the spreadsheet (BCP 47 language tag)",
+          "examples": ["en_US", "fr_FR", "de_DE"]
+        },
+        "timeZone": {
+          "type": "string",
+          "description": "The time zone of the spreadsheet in CLDR format",
+          "examples": ["America/New_York", "Europe/London", "Asia/Tokyo"]
+        },
+        "autoRecalc": {
+          "type": "string",
+          "enum": ["ON_CHANGE", "MINUTE", "HOUR"],
+          "description": "How often volatile functions are recalculated"
+        }
+      },
+      "required": ["title"]
+    },
+    "sheets": {
+      "type": "array",
+      "description": "The sheets that are part of a spreadsheet",
+      "items": {
+        "type": "object",
+        "properties": {
+          "properties": {
+            "type": "object",
+            "properties": {
+              "sheetId": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The non-negative unique ID of the sheet"
+              },
+              "title": {
+                "type": "string",
+                "description": "The name of the sheet"
+              },
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "The 0-indexed position of the sheet in the spreadsheet"
+              },
+              "sheetType": {
+                "type": "string",
+                "enum": ["GRID", "OBJECT", "DATA_SOURCE"]
+              },
+              "hidden": {
+                "type": "boolean",
+                "description": "True if the sheet is hidden"
+              },
+              "gridProperties": {
+                "type": "object",
+                "properties": {
+                  "rowCount": {"type": "integer", "minimum": 1},
+                  "columnCount": {"type": "integer", "minimum": 1},
+                  "frozenRowCount": {"type": "integer", "minimum": 0},
+                  "frozenColumnCount": {"type": "integer", "minimum": 0},
+                  "hideGridlines": {"type": "boolean"},
+                  "rowGroupControlAfter": {"type": "boolean"},
+                  "columnGroupControlAfter": {"type": "boolean"}
+                }
+              }
+            },
+            "required": ["sheetId", "title"]
+          }
+        }
+      }
+    }
+  },
+  "required": ["spreadsheetId", "properties"]
+}

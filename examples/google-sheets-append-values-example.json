@@ -1,0 +1,38 @@
+{
+  "operation": "append-values",
+  "description": "Append new rows to an existing table in a Google Sheet",
+  "request": {
+    "method": "POST",
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}/values/Sheet1!A1:append",
+    "headers": {
+      "Authorization": "Bearer {{GOOGLE_ACCESS_TOKEN}}",
+      "Content-Type": "application/json"
+    },
+    "parameters": {
+      "valueInputOption": "USER_ENTERED",
+      "insertDataOption": "INSERT_ROWS"
+    },
+    "body": {
+      "range": "Sheet1!A1",
+      "majorDimension": "ROWS",
+      "values": [
+        ["Eve Davis", "eve@example.com", "Product", "2026-05-01"],
+        ["Frank Wilson", "frank@example.com", "Sales", "2026-05-02"]
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "spreadsheetId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms",
+      "tableRange": "Sheet1!A1:D5",
+      "updates": {
+        "spreadsheetId": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms",
+        "updatedRange": "Sheet1!A6:D7",
+        "updatedRows": 2,
+        "updatedColumns": 4,
+        "updatedCells": 8
+      }
+    }
+  }
+}

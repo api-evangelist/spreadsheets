@@ -1,0 +1,104 @@
+extends: spectral:oas
+rules:
+  spreadsheets-operation-ids-required:
+    description: All operations must have an operationId
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: operationId
+      function: truthy
+
+  spreadsheets-summary-required:
+    description: All operations must have a summary
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: summary
+      function: truthy
+
+  spreadsheets-summary-title-case:
+    description: Operation summaries must use Title Case
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete].summary"
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z]*(\\s[A-Z][a-zA-Z]*)*$"
+
+  spreadsheets-tags-required:
+    description: All operations must have at least one tag
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: tags
+      function: truthy
+
+  spreadsheets-oauth2-security:
+    description: API must use OAuth 2.0 security scheme
+    severity: error
+    given: "$.components.securitySchemes.OAuth2"
+    then:
+      function: truthy
+
+  spreadsheets-response-200-get:
+    description: GET operations must have a 200 response
+    severity: error
+    given: "$.paths[*].get"
+    then:
+      field: responses.200
+      function: truthy
+
+  spreadsheets-response-401-required:
+    description: All operations must document 401 Unauthorized
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: responses.401
+      function: truthy
+
+  spreadsheets-response-403-required:
+    description: All operations must document 403 Forbidden (insufficient permissions)
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: responses.403
+      function: truthy
+
+  spreadsheets-parameters-have-descriptions:
+    description: Parameters must have descriptions
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete].parameters[*]"
+    then:
+      field: description
+      function: truthy
+
+  spreadsheets-request-body-json:
+    description: Request bodies must specify application/json content type
+    severity: error
+    given: "$.paths[*][post,put,patch].requestBody.content"
+    then:
+      field: application/json
+      function: truthy
+
+  spreadsheets-response-schema-required:
+    description: Success responses must include a schema
+    severity: warn
+    given: "$.paths[*].get.responses['200'].content.application/json"
+    then:
+      field: schema
+      function: truthy
+
+  spreadsheets-spreadsheet-id-path-param:
+    description: Operations accessing spreadsheets must use spreadsheetId path parameter
+    severity: info
+    given: "$.paths['/spreadsheets/{spreadsheetId}'][*].parameters[?(@.name == 'spreadsheetId')]"
+    then:
+      function: truthy
+
+  spreadsheets-descriptions-required:
+    description: Operations should have descriptions
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: description
+      function: truthy

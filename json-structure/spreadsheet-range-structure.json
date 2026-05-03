@@ -1,0 +1,40 @@
+{
+  "title": "Spreadsheet Value Range Structure",
+  "description": "Hierarchical structure of a Google Sheets ValueRange object returned from reads and used in writes",
+  "type": "object",
+  "fields": [
+    {
+      "name": "range",
+      "type": "string",
+      "description": "A1 notation range (e.g., 'Sheet1!A1:D10')",
+      "required": true
+    },
+    {
+      "name": "majorDimension",
+      "type": "enum",
+      "values": ["ROWS", "COLUMNS"],
+      "default": "ROWS",
+      "description": "Orientation of the values 2D array"
+    },
+    {
+      "name": "values",
+      "type": "array",
+      "description": "2D array of cell values. Outer array = rows (or columns). Inner array = cells.",
+      "items": {
+        "type": "array",
+        "description": "A row of cell values",
+        "items": {
+          "type": "string|number|boolean|null",
+          "description": "Individual cell value"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Empty rows/columns at the end of the range are omitted",
+    "null values represent empty cells when reading",
+    "Use '' (empty string) to clear a cell when writing with USER_ENTERED",
+    "RAW valueInputOption treats all values as raw strings; USER_ENTERED parses as if user typed the value (including formulas starting with =)",
+    "Trailing empty rows and columns are excluded from responses"
+  ]
+}

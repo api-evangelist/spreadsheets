@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sheets.googleapis.com/schemas/value-range",
+  "title": "Spreadsheet Value Range",
+  "description": "Schema for a range of values in a Google Sheets or Microsoft Excel spreadsheet, identified by A1 notation.",
+  "type": "object",
+  "properties": {
+    "range": {
+      "type": "string",
+      "description": "The range the values cover, in A1 notation (e.g., 'Sheet1!A1:D10')",
+      "pattern": "^[^!]*!?[A-Z]+[0-9]+:[A-Z]+[0-9]+$|^[^!]*!?[A-Z]+[0-9]+$|^[^!]*$",
+      "examples": ["Sheet1!A1:D10", "A1:B5", "'My Sheet'!C3:F20"]
+    },
+    "majorDimension": {
+      "type": "string",
+      "enum": ["ROWS", "COLUMNS"],
+      "default": "ROWS",
+      "description": "The primary orientation of the values array. ROWS means values[i] is the i-th row."
+    },
+    "values": {
+      "type": "array",
+      "description": "The data values in row-major or column-major order depending on majorDimension",
+      "items": {
+        "type": "array",
+        "description": "A single row (or column if majorDimension=COLUMNS)",
+        "items": {
+          "description": "A cell value. Can be a string, number, boolean, or empty string.",
+          "oneOf": [
+            {"type": "string"},
+            {"type": "number"},
+            {"type": "boolean"},
+            {"type": "null"}
+          ]
+        }
+      },
+      "examples": [
+        [["Name", "Age", "City"], ["Alice", 30, "New York"], ["Bob", 25, "Chicago"]],
+        [["Revenue", 1500.50], ["Expenses", 800.25], ["Profit", 700.25]]
+      ]
+    }
+  },
+  "required": ["range", "values"]
+}

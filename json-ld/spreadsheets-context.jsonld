@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sheets": "https://developers.google.com/workspace/sheets/vocab#",
+    "excel": "https://learn.microsoft.com/graph/excel/vocab#",
+    "Spreadsheet": "sheets:Spreadsheet",
+    "Workbook": "excel:Workbook",
+    "Sheet": "sheets:Sheet",
+    "Worksheet": "excel:Worksheet",
+    "Range": "sheets:Range",
+    "CellRange": "excel:Range",
+    "Table": "excel:Table",
+    "Chart": "excel:Chart",
+    "spreadsheetId": "identifier",
+    "workbookId": "identifier",
+    "spreadsheetUrl": "url",
+    "title": "name",
+    "locale": "inLanguage",
+    "timeZone": "temporalCoverage",
+    "sheetId": "sheets:sheetId",
+    "sheetType": "sheets:sheetType",
+    "hidden": "sheets:hidden",
+    "index": "position",
+    "range": "sheets:a1NotationRange",
+    "majorDimension": "sheets:majorDimension",
+    "values": "sheets:cellValues",
+    "rowCount": "sheets:rowCount",
+    "columnCount": "sheets:columnCount",
+    "frozenRowCount": "sheets:frozenRowCount",
+    "frozenColumnCount": "sheets:frozenColumnCount",
+    "valueInputOption": "sheets:valueInputOption",
+    "valueRenderOption": "sheets:valueRenderOption",
+    "session": "excel:sessionId",
+    "persistChanges": "excel:persistChanges",
+    "address": "excel:cellAddress",
+    "formulas": "excel:formulas",
+    "numberFormat": "excel:numberFormat",
+    "A1Notation": {
+      "@id": "sheets:A1Notation",
+      "@type": "@id"
+    }
+  }
+}

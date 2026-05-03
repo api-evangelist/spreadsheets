@@ -1,0 +1,29 @@
+{
+  "operation": "get-values",
+  "description": "Read a range of values from a Google Sheet",
+  "request": {
+    "method": "GET",
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}/values/Sheet1!A1:D5",
+    "headers": {
+      "Authorization": "Bearer {{GOOGLE_ACCESS_TOKEN}}"
+    },
+    "parameters": {
+      "majorDimension": "ROWS",
+      "valueRenderOption": "FORMATTED_VALUE"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "range": "Sheet1!A1:D5",
+      "majorDimension": "ROWS",
+      "values": [
+        ["Name", "Email", "Department", "Start Date"],
+        ["Alice Johnson", "alice@example.com", "Engineering", "2024-01-15"],
+        ["Bob Smith", "bob@example.com", "Marketing", "2023-06-01"],
+        ["Carol Williams", "carol@example.com", "Finance", "2024-03-20"],
+        ["David Brown", "david@example.com", "Engineering", "2022-11-08"]
+      ]
+    }
+  }
+}

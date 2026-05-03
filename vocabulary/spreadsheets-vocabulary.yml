@@ -1,0 +1,198 @@
+vocabulary:
+  name: Spreadsheets API Vocabulary
+  description: >-
+    Domain vocabulary for spreadsheet APIs including Google Sheets API v4 and Microsoft
+    Graph Excel API, covering data structures, range notation, operations, formatting,
+    and automation concepts.
+  version: "1.0.0"
+  created: "2026-05-02"
+  modified: "2026-05-02"
+  providers:
+    - Google Sheets
+    - Microsoft Excel
+  domain: Productivity Data
+
+terms:
+  - term: A1 Notation
+    definition: >-
+      The standard cell addressing format for spreadsheets: letter(s) for the column followed
+      by a number for the row, optionally prefixed by sheet name with '!'. For example,
+      'Sheet1!A1:D10' refers to the range from row 1, column A to row 10, column D on Sheet1.
+    tags: [Addressing, Reference]
+    aliases: [cell range, range notation]
+    examples: ["A1", "B2:D10", "Sheet1!A1:Z100", "'My Data'!A:A"]
+
+  - term: Spreadsheet
+    definition: >-
+      A document containing one or more sheets (worksheets), each with a grid of cells
+      organized into rows and columns. In Google Sheets, identified by a spreadsheetId.
+      In Microsoft Excel, stored as a .xlsx file identified by a workbook item ID.
+    tags: [Document, Data]
+    aliases: [workbook, document]
+    schema_type: Spreadsheet
+
+  - term: Sheet
+    definition: >-
+      A single tab within a spreadsheet containing a grid of cells. Called a "sheet" in
+      Google Sheets and a "worksheet" in Microsoft Excel. Identified by name or ID within
+      the spreadsheet. Sheets can be GRID type (standard cells) or OBJECT type (charts).
+    tags: [Structure, Grid]
+    aliases: [worksheet, tab]
+
+  - term: Range
+    definition: >-
+      A rectangular selection of cells identified by A1 notation. Ranges are used for all
+      read and write operations on spreadsheet data. A range can be a single cell (A1),
+      a row (A1:Z1), a column (A:A), or a rectangular block (A1:D10).
+    tags: [Addressing, Data]
+    aliases: [cell range, selection]
+
+  - term: Value Range
+    definition: >-
+      The API response and request object that combines a range address with its cell values.
+      The values field is a 2D array where the outer array represents rows (when majorDimension=ROWS)
+      and inner arrays represent individual cell values in each row.
+    tags: [API, Data Structure]
+
+  - term: Major Dimension
+    definition: >-
+      The orientation of the values 2D array in API responses and requests. ROWS (default)
+      means the outer array contains rows and the inner array contains column values within
+      each row. COLUMNS reverses this orientation.
+    tags: [Configuration, Data]
+    values: [ROWS, COLUMNS]
+
+  - term: Value Input Option
+    definition: >-
+      How input values are interpreted when writing to a spreadsheet. RAW treats all values
+      as literal strings. USER_ENTERED parses values as if typed by a user (numbers as numbers,
+      formulas starting with '=' are evaluated, dates parsed in locale format).
+    tags: [Configuration, Writing]
+    values: [RAW, USER_ENTERED]
+
+  - term: Value Render Option
+    definition: >-
+      How cell values are represented in read responses. FORMATTED_VALUE returns the
+      display string. UNFORMATTED_VALUE returns the raw data value. FORMULA returns
+      the formula text for formula cells.
+    tags: [Configuration, Reading]
+    values: [FORMATTED_VALUE, UNFORMATTED_VALUE, FORMULA]
+
+  - term: Batch Update
+    definition: >-
+      An API operation that applies multiple changes to a spreadsheet in a single request.
+      More efficient than making multiple individual requests. Google Sheets supports both
+      batchUpdate for structural changes and values:batchUpdate for data writes.
+    tags: [Performance, Operations]
+    aliases: [bulk update, bulk write]
+
+  - term: Append
+    definition: >-
+      An operation that adds new rows after the last row of an existing table detected
+      in the specified range. Google Sheets automatically finds the table boundary and
+      inserts data after it, avoiding overwriting existing content.
+    tags: [Writing, Operations]
+
+  - term: Spreadsheet ID
+    definition: >-
+      The unique identifier for a Google Spreadsheet, found in the spreadsheet's URL
+      between /spreadsheets/d/ and /edit. Example: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms'
+    tags: [Identity, Google Sheets]
+    aliases: [spreadsheetId]
+
+  - term: Session
+    definition: >-
+      Microsoft Excel API concept for maintaining server state across multiple API calls.
+      Sessions can be persistent (changes saved to disk) or non-persistent (temporary,
+      changes lost when session expires). Created via POST /workbook/createSession.
+    tags: [Microsoft Excel, State Management]
+
+  - term: Developer Metadata
+    definition: >-
+      Custom key-value data attached to a spreadsheet, sheet, row, or column for application
+      use. Google Sheets-specific feature for storing application state within the spreadsheet.
+    tags: [Google Sheets, Metadata, Applications]
+    aliases: [metadata, custom metadata]
+
+  - term: Frozen Rows
+    definition: >-
+      Rows at the top of a sheet that remain visible when scrolling vertically. Commonly
+      used for headers. Controlled via the gridProperties.frozenRowCount field.
+    tags: [Formatting, Navigation]
+    aliases: [frozen header rows, pinned rows]
+
+  - term: Insert Data Option
+    definition: >-
+      When appending data, controls whether to OVERWRITE existing data in the range
+      (default) or INSERT_ROWS to push existing data down to make room for new rows.
+    tags: [Configuration, Append]
+    values: [OVERWRITE, INSERT_ROWS]
+
+  - term: Named Range
+    definition: >-
+      A human-readable name assigned to a cell range (e.g., "SalesData" for A1:D100).
+      Named ranges can be used in place of A1 notation in API calls and formulas,
+      improving readability and maintainability.
+    tags: [Addressing, Reference]
+    aliases: [defined name, named item]
+
+  - term: SheetDB
+    definition: >-
+      A third-party service that exposes a Google Spreadsheet as a REST API with
+      CRUD endpoints. Enables non-technical users to use spreadsheets as a backend
+      without writing any code.
+    tags: [Third-Party, No-Code]
+    url: https://sheetdb.io/
+
+  - term: Sheety
+    definition: >-
+      A third-party service that converts Google Spreadsheets into RESTful JSON APIs,
+      providing HTTP endpoints for GET, POST, PUT, PATCH, and DELETE operations
+      against spreadsheet data.
+    tags: [Third-Party, No-Code]
+    url: https://sheety.co/
+
+  - term: Conditional Formatting
+    definition: >-
+      Rules applied to cells that automatically change formatting (color, font, etc.) based
+      on cell values or formulas. Can be set programmatically via the Google Sheets API
+      batchUpdate endpoint or the Microsoft Graph Excel API.
+    tags: [Formatting, Visualization]
+
+  - term: Pivot Table
+    definition: >-
+      An interactive data summary tool that can aggregate, sort, and group data from a
+      source range. Google Sheets API supports creating and updating pivot tables programmatically.
+    tags: [Analytics, Data]
+
+classifications:
+  sheet_types:
+    - GRID
+    - OBJECT
+    - DATA_SOURCE
+  value_render_options:
+    - FORMATTED_VALUE
+    - UNFORMATTED_VALUE
+    - FORMULA
+  value_input_options:
+    - RAW
+    - USER_ENTERED
+  insert_data_options:
+    - OVERWRITE
+    - INSERT_ROWS
+  major_dimensions:
+    - ROWS
+    - COLUMNS
+  recalc_intervals:
+    - ON_CHANGE
+    - MINUTE
+    - HOUR
+  providers:
+    - Google Sheets
+    - Microsoft Excel
+    - SheetDB
+    - Sheety
+    - Sheet Best
+    - Sheet2API
+    - Sheetlabs
+    - API Spreadsheets
