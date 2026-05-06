@@ -4,102 +4,38 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Spreadsheets
 providerId: spreadsheets
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Spreadsheets
   - Data
   - Google Sheets
   - Excel
-  - Productivity
-  - Automation
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Spreadsheets API surface. Captures per-tier
-  quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to
-  be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: This catalog entry aggregates several spreadsheet APIs (Google
+  Sheets, Microsoft Graph Excel, SheetDB, Sheety). Each has its own rate-limit
+  documentation; there is no unified throttle policy.
+sources:
+  - https://developers.google.com/sheets/api/limits
+  - https://learn.microsoft.com/graph/throttling
+  - https://docs.sheetdb.io/
+  - https://sheety.co/docs
+notes: Aggregator slug; consult each underlying provider for real per-second
+  / per-minute limits.
 responseCodes:
   throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Google Sheets API
-      - Microsoft Graph Excel API
-      - SheetDB
-      - Sheety
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Google Sheets API
-      - Microsoft Graph Excel API
-      - SheetDB
-      - Sheety
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Google Sheets API
-      - Microsoft Graph Excel API
-      - SheetDB
-      - Sheety
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Google Sheets API
-      - Microsoft Graph Excel API
-      - SheetDB
-      - Sheety
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Google Sheets API
-      - Microsoft Graph Excel API
-      - SheetDB
-      - Sheety
+  - name: Per-Component-Provider Limits
+    scope: varies
+    metric: varies
+    limit: see component provider documentation
+    notes: Google Sheets API publishes per-minute / per-user / per-project
+      quotas; Microsoft Graph publishes throttling policies per resource;
+      SheetDB and Sheety publish their own per-plan request caps.
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: Defer to Component Providers
+    description: Throttling policy is whatever the underlying provider enforces.
+      No aggregator-level policy applies.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
