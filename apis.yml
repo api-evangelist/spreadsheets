@@ -50,7 +50,7 @@ apis:
         url: https://developers.google.com/workspace/sheets/api/reference/rest
       - type: OpenAPI
         url: openapi/google-sheets-openapi.yml
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.google.com/workspace/sheets/api/quickstart/python
       - type: Discovery
         url: https://sheets.googleapis.com/$discovery/rest?version=v4
@@ -104,7 +104,7 @@ apis:
         url: https://learn.microsoft.com/en-us/graph/api/resources/excel
       - type: Reference
         url: https://learn.microsoft.com/en-us/graph/api/resources/excel
-      - type: Getting Started
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/graph/excel-use-functions
     features:
       - type: WorkbookAccess
