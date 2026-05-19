@@ -1,0 +1,181 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Sheets API — Spreadsheets
+  description: 'Google Sheets API — Spreadsheets. 3 operations. Lead operation: Create Spreadsheet. Self-contained Naftiko
+    capability covering one Spreadsheets business surface.'
+  tags:
+  - Spreadsheets
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SPREADSHEETS_API_KEY: SPREADSHEETS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: google-sheets-spreadsheets
+    baseUri: https://sheets.googleapis.com/v4
+    description: Google Sheets API — Spreadsheets business capability. Self-contained, no shared references.
+    resources:
+    - name: spreadsheets
+      path: /spreadsheets
+      operations:
+      - name: createspreadsheet
+        method: POST
+        description: Create Spreadsheet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: spreadsheets-spreadsheetId
+      path: /spreadsheets/{spreadsheetId}
+      operations:
+      - name: getspreadsheet
+        method: GET
+        description: Get Spreadsheet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          description: The spreadsheet ID to retrieve
+          required: true
+        - name: ranges
+          in: query
+          type: array
+          description: The ranges to retrieve from the spreadsheet
+        - name: includeGridData
+          in: query
+          type: boolean
+          description: True if grid data should be returned
+    - name: spreadsheets-spreadsheetId}:batchUpdate
+      path: /spreadsheets/{spreadsheetId}:batchUpdate
+      operations:
+      - name: batchupdatespreadsheet
+        method: POST
+        description: Batch Update Spreadsheet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.SPREADSHEETS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: google-sheets-spreadsheets-rest
+    port: 8080
+    description: REST adapter for Google Sheets API — Spreadsheets. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/spreadsheets
+      name: spreadsheets
+      description: REST surface for spreadsheets.
+      operations:
+      - method: POST
+        name: createspreadsheet
+        description: Create Spreadsheet
+        call: google-sheets-spreadsheets.createspreadsheet
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}
+      name: spreadsheets-spreadsheetid
+      description: REST surface for spreadsheets-spreadsheetId.
+      operations:
+      - method: GET
+        name: getspreadsheet
+        description: Get Spreadsheet
+        call: google-sheets-spreadsheets.getspreadsheet
+        with:
+          spreadsheetId: rest.spreadsheetId
+          ranges: rest.ranges
+          includeGridData: rest.includeGridData
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/spreadsheetid-batchupdate
+      name: spreadsheets-spreadsheetid-batchupdate
+      description: REST surface for spreadsheets-spreadsheetId}:batchUpdate.
+      operations:
+      - method: POST
+        name: batchupdatespreadsheet
+        description: Batch Update Spreadsheet
+        call: google-sheets-spreadsheets.batchupdatespreadsheet
+        with:
+          spreadsheetId: rest.spreadsheetId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: google-sheets-spreadsheets-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Sheets API — Spreadsheets. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: create-spreadsheet
+      description: Create Spreadsheet
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-spreadsheets.createspreadsheet
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-spreadsheet
+      description: Get Spreadsheet
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-sheets-spreadsheets.getspreadsheet
+      with:
+        spreadsheetId: tools.spreadsheetId
+        ranges: tools.ranges
+        includeGridData: tools.includeGridData
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: batch-update-spreadsheet
+      description: Batch Update Spreadsheet
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-spreadsheets.batchupdatespreadsheet
+      with:
+        spreadsheetId: tools.spreadsheetId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,440 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Sheets API — Values
+  description: 'Google Sheets API — Values. 7 operations. Lead operation: Get Values. Self-contained Naftiko capability covering
+    one Spreadsheets business surface.'
+  tags:
+  - Spreadsheets
+  - Values
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SPREADSHEETS_API_KEY: SPREADSHEETS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: google-sheets-values
+    baseUri: https://sheets.googleapis.com/v4
+    description: Google Sheets API — Values business capability. Self-contained, no shared references.
+    resources:
+    - name: spreadsheets-spreadsheetId-values-range
+      path: /spreadsheets/{spreadsheetId}/values/{range}
+      operations:
+      - name: getvalues
+        method: GET
+        description: Get Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: range
+          in: path
+          type: string
+          description: The A1 notation or R1C1 notation of the range to retrieve values from
+          required: true
+        - name: majorDimension
+          in: query
+          type: string
+          description: The major dimension that results should use
+        - name: valueRenderOption
+          in: query
+          type: string
+          description: How values should be represented in the output
+        - name: dateTimeRenderOption
+          in: query
+          type: string
+          description: How dates, times, and durations should be represented
+      - name: updatevalues
+        method: PUT
+        description: Update Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: range
+          in: path
+          type: string
+          required: true
+        - name: valueInputOption
+          in: query
+          type: string
+          description: How the input data should be interpreted
+          required: true
+        - name: includeValuesInResponse
+          in: query
+          type: boolean
+        - name: responseValueRenderOption
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: spreadsheets-spreadsheetId-values-range}:append
+      path: /spreadsheets/{spreadsheetId}/values/{range}:append
+      operations:
+      - name: appendvalues
+        method: POST
+        description: Append Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: range
+          in: path
+          type: string
+          required: true
+        - name: valueInputOption
+          in: query
+          type: string
+          required: true
+        - name: insertDataOption
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: spreadsheets-spreadsheetId-values-range}:clear
+      path: /spreadsheets/{spreadsheetId}/values/{range}:clear
+      operations:
+      - name: clearvalues
+        method: POST
+        description: Clear Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: range
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: spreadsheets-spreadsheetId-values:batchClear
+      path: /spreadsheets/{spreadsheetId}/values:batchClear
+      operations:
+      - name: batchclearvalues
+        method: POST
+        description: Batch Clear Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: spreadsheets-spreadsheetId-values:batchGet
+      path: /spreadsheets/{spreadsheetId}/values:batchGet
+      operations:
+      - name: batchgetvalues
+        method: GET
+        description: Batch Get Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: ranges
+          in: query
+          type: array
+          required: true
+        - name: majorDimension
+          in: query
+          type: string
+        - name: valueRenderOption
+          in: query
+          type: string
+    - name: spreadsheets-spreadsheetId-values:batchUpdate
+      path: /spreadsheets/{spreadsheetId}/values:batchUpdate
+      operations:
+      - name: batchupdatevalues
+        method: POST
+        description: Batch Update Values
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: spreadsheetId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.SPREADSHEETS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: google-sheets-values-rest
+    port: 8080
+    description: REST adapter for Google Sheets API — Values. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/spreadsheets/{spreadsheetid}/values/{range}
+      name: spreadsheets-spreadsheetid-values-range
+      description: REST surface for spreadsheets-spreadsheetId-values-range.
+      operations:
+      - method: GET
+        name: getvalues
+        description: Get Values
+        call: google-sheets-values.getvalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          range: rest.range
+          majorDimension: rest.majorDimension
+          valueRenderOption: rest.valueRenderOption
+          dateTimeRenderOption: rest.dateTimeRenderOption
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updatevalues
+        description: Update Values
+        call: google-sheets-values.updatevalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          range: rest.range
+          valueInputOption: rest.valueInputOption
+          includeValuesInResponse: rest.includeValuesInResponse
+          responseValueRenderOption: rest.responseValueRenderOption
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}/values/range-append
+      name: spreadsheets-spreadsheetid-values-range-append
+      description: REST surface for spreadsheets-spreadsheetId-values-range}:append.
+      operations:
+      - method: POST
+        name: appendvalues
+        description: Append Values
+        call: google-sheets-values.appendvalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          range: rest.range
+          valueInputOption: rest.valueInputOption
+          insertDataOption: rest.insertDataOption
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}/values/range-clear
+      name: spreadsheets-spreadsheetid-values-range-clear
+      description: REST surface for spreadsheets-spreadsheetId-values-range}:clear.
+      operations:
+      - method: POST
+        name: clearvalues
+        description: Clear Values
+        call: google-sheets-values.clearvalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          range: rest.range
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}/values-batchclear
+      name: spreadsheets-spreadsheetid-values-batchclear
+      description: REST surface for spreadsheets-spreadsheetId-values:batchClear.
+      operations:
+      - method: POST
+        name: batchclearvalues
+        description: Batch Clear Values
+        call: google-sheets-values.batchclearvalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}/values-batchget
+      name: spreadsheets-spreadsheetid-values-batchget
+      description: REST surface for spreadsheets-spreadsheetId-values:batchGet.
+      operations:
+      - method: GET
+        name: batchgetvalues
+        description: Batch Get Values
+        call: google-sheets-values.batchgetvalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          ranges: rest.ranges
+          majorDimension: rest.majorDimension
+          valueRenderOption: rest.valueRenderOption
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/spreadsheets/{spreadsheetid}/values-batchupdate
+      name: spreadsheets-spreadsheetid-values-batchupdate
+      description: REST surface for spreadsheets-spreadsheetId-values:batchUpdate.
+      operations:
+      - method: POST
+        name: batchupdatevalues
+        description: Batch Update Values
+        call: google-sheets-values.batchupdatevalues
+        with:
+          spreadsheetId: rest.spreadsheetId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: google-sheets-values-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Sheets API — Values. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: get-values
+      description: Get Values
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-sheets-values.getvalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        range: tools.range
+        majorDimension: tools.majorDimension
+        valueRenderOption: tools.valueRenderOption
+        dateTimeRenderOption: tools.dateTimeRenderOption
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-values
+      description: Update Values
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: google-sheets-values.updatevalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        range: tools.range
+        valueInputOption: tools.valueInputOption
+        includeValuesInResponse: tools.includeValuesInResponse
+        responseValueRenderOption: tools.responseValueRenderOption
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: append-values
+      description: Append Values
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-values.appendvalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        range: tools.range
+        valueInputOption: tools.valueInputOption
+        insertDataOption: tools.insertDataOption
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: clear-values
+      description: Clear Values
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-values.clearvalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        range: tools.range
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: batch-clear-values
+      description: Batch Clear Values
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-values.batchclearvalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: batch-get-values
+      description: Batch Get Values
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-sheets-values.batchgetvalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        ranges: tools.ranges
+        majorDimension: tools.majorDimension
+        valueRenderOption: tools.valueRenderOption
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: batch-update-values
+      description: Batch Update Values
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-sheets-values.batchupdatevalues
+      with:
+        spreadsheetId: tools.spreadsheetId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
