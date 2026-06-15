@@ -1,115 +1,133 @@
-# Spreadsheets
+# Spreadsheets (spreadsheets)
 
-Spreadsheets covers the APIs, tools, and services for programmatic access to spreadsheet data across major platforms. The Google Sheets API v4 provides RESTful access to read, write, format, and manage Google Spreadsheets. The Microsoft Graph Excel API enables reading and writing Excel workbooks stored in OneDrive for Business and SharePoint. Third-party services like SheetDB, Sheety, and Sheet Best convert spreadsheets into REST APIs for use as lightweight backends.
+Spreadsheets covers the APIs, tools, and services for programmatic access to spreadsheet data across major platforms including Google Sheets and Microsoft Excel. The Google Sheets API v4 provides RESTful access to read, write, format, and manage Google Spreadsheets. The Microsoft Graph Excel API enables reading and writing Excel workbooks stored in OneDrive for Business and SharePoint. Third-party services like SheetDB, Sheety, Sheet Best, and Sheet2API convert spreadsheets into REST APIs for use as lightweight backends. Spreadsheet APIs are widely used for data import/export, automated reporting, form submissions, lightweight CMS, and business process automation.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/spreadsheets/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/spreadsheets/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Spreadsheets
+- Data
+- Google Sheets
+- Excel
+- Productivity
+- Automation
+
+## Timestamps
+
+- **Created:** 2026-03-16
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Google Sheets API
 
-The Google Sheets API v4 is a RESTful interface for reading and modifying Google Spreadsheet data programmatically.
+The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. The API supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, and accessing developer metadata. Authentication uses Google OAuth 2.0. The API is widely used for data pipelines, automated reporting, form data collection, and spreadsheet-powered applications.
 
-- **Base URL:** https://sheets.googleapis.com/v4
-- **Authentication:** Google OAuth 2.0 (Authorization Code flow)
-- **Documentation:** https://developers.google.com/workspace/sheets/api
-- **Scopes:** spreadsheets, spreadsheets.readonly
+- **Human URL:** [https://developers.google.com/workspace/sheets/api](https://developers.google.com/workspace/sheets/api)
+- **Base URL:** `https://sheets.googleapis.com/v4`
 
-**Key Capabilities:**
-- Create and retrieve spreadsheets
-- Read/write cell values by range using A1 notation
-- Batch get/update multiple ranges in a single call
-- Append rows to existing tables
-- Manage sheet structure, formatting, and charts
-- Developer metadata for app-level storage
+#### Tags
+
+- Google Sheets
+- Spreadsheets
+- Data
+- Productivity
+- Google Workspace
+
+#### Properties
+
+- [Documentation](https://developers.google.com/workspace/sheets/api/guides/concepts)
+- [Reference](https://developers.google.com/workspace/sheets/api/reference/rest)
+- [OpenAPI](openapi/google-sheets-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/google-sheets.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-sheets.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Getting Started](https://developers.google.com/workspace/sheets/api/quickstart/python)
+- [Discovery](https://sheets.googleapis.com/$discovery/rest?version=v4)
 
 ### Microsoft Graph Excel API
 
-The Microsoft Graph Excel API enables reading and writing .xlsx workbooks stored in OneDrive for Business and SharePoint via Microsoft Graph.
+The Microsoft Graph Excel API enables reading and writing Excel workbooks (.xlsx format) stored in OneDrive for Business, SharePoint, or Group drives via the Microsoft Graph REST API. Supports worksheets, ranges, tables, charts, named items, and Excel worksheet functions. Uses session-based access for efficient multi-step operations. Authentication requires Microsoft identity platform (OAuth 2.0) with Files.Read or Files.ReadWrite scopes.
 
-- **Base URL:** https://graph.microsoft.com/v1.0
-- **Authentication:** Microsoft identity platform (OAuth 2.0)
-- **Documentation:** https://learn.microsoft.com/en-us/graph/api/resources/excel
-- **Scopes:** Files.Read, Files.ReadWrite
+- **Human URL:** [https://learn.microsoft.com/en-us/graph/api/resources/excel](https://learn.microsoft.com/en-us/graph/api/resources/excel)
+- **Base URL:** `https://graph.microsoft.com/v1.0`
 
-**Key Capabilities:**
-- Persistent and non-persistent session management
-- Worksheet management (create, rename, delete)
-- Range read/write and cell formatting
-- Table management (create, rows, columns, sort, filter)
-- Chart creation and image export
-- 300+ Excel worksheet functions via API
+#### Tags
 
-### Third-Party Spreadsheet APIs
+- Excel
+- Microsoft Graph
+- Microsoft 365
+- Spreadsheets
+- OneDrive
 
-| Service | Description |
-|---|---|
-| [SheetDB](https://sheetdb.io/) | Google Sheets to REST API, full CRUD |
-| [Sheety](https://sheety.co/) | Google Sheets to RESTful JSON API |
-| [Sheet Best](https://sheetbest.com/) | Secure REST endpoints for Sheets data |
-| [Sheet2API](https://sheet2api.com/) | Hosted REST endpoints with caching |
-| [Sheetlabs](https://sheetlabs.com/) | Scalable APIs from spreadsheets |
-| [API Spreadsheets](https://apispreadsheets.com/) | AI workflow integration |
+#### Properties
 
-## Artifacts
+- [Documentation](https://learn.microsoft.com/en-us/graph/api/resources/excel)
+- [Reference](https://learn.microsoft.com/en-us/graph/api/resources/excel)
+- [Getting Started](https://learn.microsoft.com/en-us/graph/excel-use-functions)
+- [Postman Collection](collections/google-sheets.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-sheets.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-### OpenAPI Specifications
+### SheetDB
 
-| Spec | Description |
-|---|---|
-| [google-sheets-openapi.yml](openapi/google-sheets-openapi.yml) | Google Sheets API v4 — spreadsheets, values, sheets, and metadata operations |
+SheetDB is a service that turns any Google Sheet into a JSON REST API. Provides GET, POST, PUT, PATCH, and DELETE endpoints against spreadsheet data, supporting full CRUD operations without code. Used for prototyping, simple backends, and content management.
 
-### JSON Schema
+- **Human URL:** [https://sheetdb.io/](https://sheetdb.io/)
+- **Base URL:** `https://sheetdb.io/api/v1`
 
-| Schema | Description |
-|---|---|
-| [spreadsheet-range-schema.json](json-schema/spreadsheet-range-schema.json) | ValueRange object schema for reading and writing cell data |
-| [spreadsheet-value-schema.json](json-schema/spreadsheet-value-schema.json) | Spreadsheet object schema with sheets and properties |
+#### Tags
 
-### JSON Structure
+- Spreadsheets
+- No Code
+- REST API
+- Google Sheets
 
-| Structure | Description |
-|---|---|
-| [spreadsheet-range-structure.json](json-structure/spreadsheet-range-structure.json) | Hierarchical field map for the ValueRange object with usage notes |
+#### Properties
 
-### JSON-LD Context
+- [Documentation](https://docs.sheetdb.io/)
+- [Website](https://sheetdb.io/)
+- [Postman Collection](collections/google-sheets.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-sheets.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-| Context | Description |
-|---|---|
-| [spreadsheets-context.jsonld](json-ld/spreadsheets-context.jsonld) | Linked data context for Google Sheets and Excel API vocabulary |
+### Sheety
 
-### Examples
+Sheety converts Google Spreadsheets into RESTful JSON APIs, providing simple HTTP endpoints for reading and writing spreadsheet data. Supports GET, POST, PUT, PATCH, and DELETE operations with optional API key authentication.
 
-| Example | Description |
-|---|---|
-| [google-sheets-read-values-example.json](examples/google-sheets-read-values-example.json) | Read a table of employee data from a Google Sheet |
-| [google-sheets-append-values-example.json](examples/google-sheets-append-values-example.json) | Append new rows to an existing table |
+- **Human URL:** [https://sheety.co/](https://sheety.co/)
+- **Base URL:** `https://api.sheety.co`
 
-### Spectral Rules
+#### Tags
 
-| Ruleset | Description |
-|---|---|
-| [spreadsheets-rules.yml](rules/spreadsheets-rules.yml) | Spectral ruleset for spreadsheet API conventions |
+- Spreadsheets
+- No Code
+- REST API
+- Google Sheets
 
-### Capabilities
+#### Properties
 
-| Capability | Description |
-|---|---|
-| [spreadsheet-automation.yaml](capabilities/spreadsheet-automation.yaml) | Spreadsheet automation: read, write, append, batch operations (6 MCP tools) |
-| [shared/google-sheets.yaml](capabilities/shared/google-sheets.yaml) | Shared Google Sheets API definition |
+- [Documentation](https://sheety.co/docs)
+- [Website](https://sheety.co/)
+- [Postman Collection](collections/google-sheets.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/google-sheets.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-### Vocabulary
+## Common Properties
 
-| Vocabulary | Description |
-|---|---|
-| [spreadsheets-vocabulary.yml](vocabulary/spreadsheets-vocabulary.yml) | Domain vocabulary for spreadsheet APIs: ranges, operations, formatting, providers |
-
-## Common Use Cases
-
-- **Data Pipeline:** Import/export between databases and spreadsheets
-- **Automated Reporting:** Generate reports directly in Google Sheets or Excel
-- **Form Collection:** Write form submissions as spreadsheet rows (lightweight backend)
-- **Financial Modeling:** Update financial models with live data
-- **Content Management:** Use sheets as a CMS for websites and apps
-- **AI Workflows:** Enable LLMs to read and update spreadsheet data via MCP
+- [Website](https://developers.google.com/workspace/sheets/api)
+- [Reference](https://learn.microsoft.com/en-us/graph/api/resources/excel)
+- [OpenAPI](openapi/google-sheets-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [JSON Schema](json-schema/spreadsheet-range-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/spreadsheet-value-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Structure](json-structure/spreadsheet-range-structure.json)
+- [JSON-LD](json-ld/spreadsheets-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Spectral Rules](rules/spreadsheets-rules.yml)
+- [Capabilities](capabilities/spreadsheet-automation.yaml)
+- [Vocabulary](vocabulary/spreadsheets-vocabulary.yml)
 
 ## Maintainers
 
