@@ -154,6 +154,10 @@ apis:
       - type: Website
         url: https://sheety.co/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/spreadsheets-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/spreadsheets-domain-security.yml
   - type: Authentication
     url: authentication/spreadsheets-authentication.yml
   - type: OAuthScopes
