@@ -154,6 +154,10 @@ apis:
       - type: Website
         url: https://sheety.co/
 common:
+  - type: Authentication
+    url: authentication/spreadsheets-authentication.yml
+  - type: OAuthScopes
+    url: scopes/spreadsheets-scopes.yml
   - type: Website
     url: https://developers.google.com/workspace/sheets/api
   - type: Reference

@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/google-sheets-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/google-sheets-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+scopes:
+- scope: https://www.googleapis.com/auth/spreadsheets
+  description: Read and write access to Google Sheets
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-sheets-openapi.yml
+- scope: https://www.googleapis.com/auth/spreadsheets.readonly
+  description: Read-only access to Google Sheets
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/google-sheets-openapi.yml
