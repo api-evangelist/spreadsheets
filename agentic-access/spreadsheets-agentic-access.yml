@@ -1,0 +1,239 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/google-sheets-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 13
+  by_action_class:
+    acting: 9
+    connected: 4
+  by_consequence:
+    write: 9
+    read: 4
+  human_in_the_loop_required: 0
+operations:
+- path: /spreadsheets
+  method: post
+  operationId: create-spreadsheet
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}
+  method: get
+  operationId: get-spreadsheet
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}:batchUpdate
+  method: post
+  operationId: batch-update-spreadsheet
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values/{range}
+  method: get
+  operationId: get-values
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values/{range}
+  method: put
+  operationId: update-values
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values/{range}:append
+  method: post
+  operationId: append-values
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values/{range}:clear
+  method: post
+  operationId: clear-values
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values:batchGet
+  method: get
+  operationId: batch-get-values
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values:batchUpdate
+  method: post
+  operationId: batch-update-values
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/values:batchClear
+  method: post
+  operationId: batch-clear-values
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo
+  method: post
+  operationId: copy-sheet-to
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}
+  method: get
+  operationId: get-developer-metadata
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly
+- path: /spreadsheets/{spreadsheetId}/developerMetadata:search
+  method: post
+  operationId: search-developer-metadata
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - https://www.googleapis.com/auth/spreadsheets
+    - https://www.googleapis.com/auth/spreadsheets.readonly

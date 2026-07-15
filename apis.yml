@@ -154,6 +154,8 @@ apis:
       - type: Website
         url: https://sheety.co/
 common:
+  - type: AgenticAccess
+    url: agentic-access/spreadsheets-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/spreadsheets-vulnerability-disclosure.yml
   - type: DomainSecurity
