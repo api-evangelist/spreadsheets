@@ -1,5 +1,6 @@
 aid: spreadsheets
 name: Spreadsheets
+kind: topic
 description: >-
   Spreadsheets covers the APIs, tools, and services for programmatic access to spreadsheet data across major platforms
   including Google Sheets and Microsoft Excel. The Google Sheets API v4 provides RESTful access to read, write, format,
