@@ -1,0 +1,164 @@
+openapi: 3.0.3
+info:
+  title: Google Sheets Developer Metadata API
+  description: The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. Supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, pivot tables, charts, and developer metadata. Authentication uses Google OAuth 2.0 with the sheets.readonly or sheets scope.
+  version: 4.0.0
+  termsOfService: https://developers.google.com/terms/
+  contact:
+    name: Google Workspace Developer Support
+    url: https://developers.google.com/workspace/sheets/api
+  license:
+    name: Creative Commons Attribution 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+servers:
+- url: https://sheets.googleapis.com/v4
+  description: Google Sheets API v4
+security:
+- OAuth2:
+  - https://www.googleapis.com/auth/spreadsheets
+  - https://www.googleapis.com/auth/spreadsheets.readonly
+tags:
+- name: Developer Metadata
+  description: Manage developer metadata attached to spreadsheets
+paths:
+  /spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}:
+    get:
+      operationId: get-developer-metadata
+      tags:
+      - Developer Metadata
+      summary: Get Developer Metadata
+      description: Returns the developer metadata with the specified ID.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: metadataId
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Developer metadata retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeveloperMetadata'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /spreadsheets/{spreadsheetId}/developerMetadata:search:
+    post:
+      operationId: search-developer-metadata
+      tags:
+      - Developer Metadata
+      summary: Search Developer Metadata
+      description: Returns all developer metadata matching the specified DataFilter.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dataFilters:
+                  type: array
+                  items:
+                    type: object
+      responses:
+        '200':
+          description: Developer metadata search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  matchedDeveloperMetadata:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        developerMetadata:
+                          $ref: '#/components/schemas/DeveloperMetadata'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+components:
+  responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Spreadsheet or range not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    DeveloperMetadata:
+      type: object
+      properties:
+        metadataId:
+          type: integer
+          description: The spreadsheet-scoped unique ID that identifies the metadata
+        metadataKey:
+          type: string
+          description: The metadata key
+        metadataValue:
+          type: string
+          description: Data associated with the metadata's key
+        location:
+          type: object
+          description: The location where the metadata is associated
+        visibility:
+          type: string
+          enum:
+          - DEVELOPER_METADATA_VISIBILITY_UNSPECIFIED
+          - DOCUMENT
+          - PROJECT
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/spreadsheets: Read and write access to Google Sheets
+            https://www.googleapis.com/auth/spreadsheets.readonly: Read-only access to Google Sheets
+externalDocs:
+  description: Google Sheets API Documentation
+  url: https://developers.google.com/workspace/sheets/api

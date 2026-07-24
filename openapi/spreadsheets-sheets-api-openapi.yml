@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: Google Developer Metadata Sheets API
+  description: The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. Supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, pivot tables, charts, and developer metadata. Authentication uses Google OAuth 2.0 with the sheets.readonly or sheets scope.
+  version: 4.0.0
+  termsOfService: https://developers.google.com/terms/
+  contact:
+    name: Google Workspace Developer Support
+    url: https://developers.google.com/workspace/sheets/api
+  license:
+    name: Creative Commons Attribution 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+servers:
+- url: https://sheets.googleapis.com/v4
+  description: Google Sheets API v4
+security:
+- OAuth2:
+  - https://www.googleapis.com/auth/spreadsheets
+  - https://www.googleapis.com/auth/spreadsheets.readonly
+tags:
+- name: Sheets
+  description: Sheet-level operations
+paths:
+  /spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo:
+    post:
+      operationId: copy-sheet-to
+      tags:
+      - Sheets
+      summary: Copy Sheet To
+      description: Copies a single sheet from a spreadsheet to another spreadsheet. Returns the properties of the newly created sheet.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sheetId
+        in: path
+        description: The ID of the sheet to copy
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                destinationSpreadsheetId:
+                  type: string
+                  description: The ID of the spreadsheet to copy the sheet to
+              required:
+              - destinationSpreadsheetId
+      responses:
+        '200':
+          description: Sheet copied successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SheetProperties'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+components:
+  responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
+    SheetProperties:
+      type: object
+      properties:
+        sheetId:
+          type: integer
+          description: The ID of the sheet. Must be non-negative
+        title:
+          type: string
+          description: The name of the sheet
+          example: Sheet1
+        index:
+          type: integer
+          description: The index of the sheet within the spreadsheet (0-indexed)
+        sheetType:
+          type: string
+          enum:
+          - GRID
+          - OBJECT
+          - DATA_SOURCE
+          description: The type of sheet
+        hidden:
+          type: boolean
+          description: True if the sheet is hidden in the UI
+        gridProperties:
+          type: object
+          description: Grid-specific properties
+          properties:
+            rowCount:
+              type: integer
+              description: The number of rows in the grid
+            columnCount:
+              type: integer
+              description: The number of columns in the grid
+            frozenRowCount:
+              type: integer
+              description: The number of rows that are frozen
+            frozenColumnCount:
+              type: integer
+              description: The number of columns that are frozen
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/spreadsheets: Read and write access to Google Sheets
+            https://www.googleapis.com/auth/spreadsheets.readonly: Read-only access to Google Sheets
+externalDocs:
+  description: Google Sheets API Documentation
+  url: https://developers.google.com/workspace/sheets/api

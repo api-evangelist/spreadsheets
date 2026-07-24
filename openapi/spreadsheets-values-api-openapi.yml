@@ -1,0 +1,484 @@
+openapi: 3.0.3
+info:
+  title: Google Sheets Developer Metadata Values API
+  description: The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. Supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, pivot tables, charts, and developer metadata. Authentication uses Google OAuth 2.0 with the sheets.readonly or sheets scope.
+  version: 4.0.0
+  termsOfService: https://developers.google.com/terms/
+  contact:
+    name: Google Workspace Developer Support
+    url: https://developers.google.com/workspace/sheets/api
+  license:
+    name: Creative Commons Attribution 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+servers:
+- url: https://sheets.googleapis.com/v4
+  description: Google Sheets API v4
+security:
+- OAuth2:
+  - https://www.googleapis.com/auth/spreadsheets
+  - https://www.googleapis.com/auth/spreadsheets.readonly
+tags:
+- name: Values
+  description: Read and write cell values
+paths:
+  /spreadsheets/{spreadsheetId}/values/{range}:
+    get:
+      operationId: get-values
+      tags:
+      - Values
+      summary: Get Values
+      description: Returns a range of values from a spreadsheet. The caller must specify the spreadsheet ID and a range.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: range
+        in: path
+        description: The A1 notation or R1C1 notation of the range to retrieve values from
+        required: true
+        schema:
+          type: string
+          example: Sheet1!A1:D10
+      - name: majorDimension
+        in: query
+        description: The major dimension that results should use
+        required: false
+        schema:
+          type: string
+          enum:
+          - ROWS
+          - COLUMNS
+          default: ROWS
+      - name: valueRenderOption
+        in: query
+        description: How values should be represented in the output
+        required: false
+        schema:
+          type: string
+          enum:
+          - FORMATTED_VALUE
+          - UNFORMATTED_VALUE
+          - FORMULA
+          default: FORMATTED_VALUE
+      - name: dateTimeRenderOption
+        in: query
+        description: How dates, times, and durations should be represented
+        required: false
+        schema:
+          type: string
+          enum:
+          - SERIAL_NUMBER
+          - FORMATTED_STRING
+      responses:
+        '200':
+          description: Values retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValueRange'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    put:
+      operationId: update-values
+      tags:
+      - Values
+      summary: Update Values
+      description: Sets values in a range of a spreadsheet. The caller must specify the spreadsheet ID, range, and a valueInputOption.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: range
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: valueInputOption
+        in: query
+        description: How the input data should be interpreted
+        required: true
+        schema:
+          type: string
+          enum:
+          - RAW
+          - USER_ENTERED
+      - name: includeValuesInResponse
+        in: query
+        required: false
+        schema:
+          type: boolean
+          default: false
+      - name: responseValueRenderOption
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - FORMATTED_VALUE
+          - UNFORMATTED_VALUE
+          - FORMULA
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValueRange'
+      responses:
+        '200':
+          description: Values updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateValuesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /spreadsheets/{spreadsheetId}/values/{range}:append:
+    post:
+      operationId: append-values
+      tags:
+      - Values
+      summary: Append Values
+      description: Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" in that range. Values will be appended to the next row of the table.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: range
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: valueInputOption
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - RAW
+          - USER_ENTERED
+      - name: insertDataOption
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - OVERWRITE
+          - INSERT_ROWS
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValueRange'
+      responses:
+        '200':
+          description: Values appended successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppendValuesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /spreadsheets/{spreadsheetId}/values/{range}:clear:
+    post:
+      operationId: clear-values
+      tags:
+      - Values
+      summary: Clear Values
+      description: Clears values from a spreadsheet. The caller must specify the spreadsheet ID and range. Only values are cleared; all other properties of the cell (such as formatting, data validation, etc.) are kept.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: range
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Values cleared successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClearValuesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /spreadsheets/{spreadsheetId}/values:batchGet:
+    get:
+      operationId: batch-get-values
+      tags:
+      - Values
+      summary: Batch Get Values
+      description: Returns one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more ranges.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: ranges
+        in: query
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+        style: form
+        explode: true
+      - name: majorDimension
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - ROWS
+          - COLUMNS
+      - name: valueRenderOption
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - FORMATTED_VALUE
+          - UNFORMATTED_VALUE
+          - FORMULA
+      responses:
+        '200':
+          description: Values retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spreadsheetId:
+                    type: string
+                  valueRanges:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValueRange'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /spreadsheets/{spreadsheetId}/values:batchUpdate:
+    post:
+      operationId: batch-update-values
+      tags:
+      - Values
+      summary: Batch Update Values
+      description: Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a valueInputOption, and one or more ValueRanges.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                valueInputOption:
+                  type: string
+                  enum:
+                  - RAW
+                  - USER_ENTERED
+                data:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ValueRange'
+              required:
+              - valueInputOption
+              - data
+      responses:
+        '200':
+          description: Values batch updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spreadsheetId:
+                    type: string
+                  totalUpdatedRows:
+                    type: integer
+                  totalUpdatedColumns:
+                    type: integer
+                  totalUpdatedCells:
+                    type: integer
+                  totalUpdatedSheets:
+                    type: integer
+                  responses:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UpdateValuesResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+  /spreadsheets/{spreadsheetId}/values:batchClear:
+    post:
+      operationId: batch-clear-values
+      tags:
+      - Values
+      summary: Batch Clear Values
+      description: Clears one or more ranges of values from a spreadsheet.
+      parameters:
+      - name: spreadsheetId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ranges:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Values cleared successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  spreadsheetId:
+                    type: string
+                  clearedRanges:
+                    type: array
+                    items:
+                      type: string
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+components:
+  schemas:
+    UpdateValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        updatedRange:
+          type: string
+        updatedRows:
+          type: integer
+        updatedColumns:
+          type: integer
+        updatedCells:
+          type: integer
+    ValueRange:
+      type: object
+      description: Data within a range of the spreadsheet
+      properties:
+        range:
+          type: string
+          description: The range the values cover, in A1 notation
+          example: Sheet1!A1:B2
+        majorDimension:
+          type: string
+          enum:
+          - ROWS
+          - COLUMNS
+          description: The major dimension of the values
+        values:
+          type: array
+          description: The data that was read or to be written
+          items:
+            type: array
+            items:
+              description: A cell value (string, number, boolean, or empty)
+    ClearValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        clearedRange:
+          type: string
+    AppendValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        tableRange:
+          type: string
+          description: The range (in A1 notation) of the table that values were appended to
+        updates:
+          $ref: '#/components/schemas/UpdateValuesResponse'
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
+  responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Spreadsheet or range not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/spreadsheets: Read and write access to Google Sheets
+            https://www.googleapis.com/auth/spreadsheets.readonly: Read-only access to Google Sheets
+externalDocs:
+  description: Google Sheets API Documentation
+  url: https://developers.google.com/workspace/sheets/api
