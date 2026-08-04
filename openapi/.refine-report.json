@@ -1,0 +1,20 @@
+{
+  "provider": "spreadsheets",
+  "sources": [
+    "spreadsheets-developer-metadata-api-openapi.yml",
+    "spreadsheets-sheets-api-openapi.yml",
+    "spreadsheets-spreadsheets-api-openapi.yml",
+    "spreadsheets-values-api-openapi.yml"
+  ],
+  "outputs": [
+    "spreadsheets-developer-metadata-api-openapi.yml",
+    "spreadsheets-sheets-api-openapi.yml",
+    "spreadsheets-spreadsheets-api-openapi.yml",
+    "spreadsheets-values-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
