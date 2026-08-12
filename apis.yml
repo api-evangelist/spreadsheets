@@ -201,7 +201,7 @@ common:
   - type: Reference
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel
   - type: OpenAPI
-    url: openapi/google-sheets-openapi.yml
+    url: openapi/_original/google-sheets-openapi.yml
   - type: JSONSchema
     url: json-schema/spreadsheet-range-schema.json
   - type: JSONSchema
@@ -212,8 +212,6 @@ common:
     url: json-ld/spreadsheets-context.jsonld
   - type: SpectralRules
     url: rules/spreadsheets-rules.yml
-  - type: Capabilities
-    url: capabilities/spreadsheet-automation.yaml
   - type: Vocabulary
     url: vocabulary/spreadsheets-vocabulary.yml
 maintainers:
