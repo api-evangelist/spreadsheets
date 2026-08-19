@@ -1,0 +1,792 @@
+{
+  "item": [
+    {
+      "id": "ece91ee0-61a8-4db2-adfb-400498452337",
+      "name": "Spreadsheets",
+      "description": {
+        "content": "Spreadsheet-level operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68dc05fc-ad4f-4d28-adeb-32b7190364e9",
+          "name": "Create Spreadsheet",
+          "request": {
+            "name": "Create Spreadsheet",
+            "description": {
+              "content": "Creates a new spreadsheet, returning the newly created spreadsheet.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spreadsheets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"properties\": {\n    \"title\": \"<string>\",\n    \"locale\": \"<string>\",\n    \"timeZone\": \"<string>\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"<string>\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"<string>\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5a0fcae8-edc2-4204-8271-8bbc4554cdde",
+              "name": "Spreadsheet created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"properties\": {\n    \"title\": \"My Spreadsheet\",\n    \"locale\": \"en_US\",\n    \"timeZone\": \"America/New_York\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"spreadsheetId\": \"string\",\n  \"properties\": {\n    \"title\": \"My Spreadsheet\",\n    \"locale\": \"en_US\",\n    \"timeZone\": \"America/New_York\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ],\n  \"spreadsheetUrl\": \"https://JfK.phyixVvOaEGIT.ID1x5uEg,JS,Gx,ec4TwG,9qC\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aac5834a-6026-44b0-8526-f0176d585a37",
+              "name": "Authentication required or access token invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"properties\": {\n    \"title\": \"My Spreadsheet\",\n    \"locale\": \"en_US\",\n    \"timeZone\": \"America/New_York\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9572a400-b4ac-4fad-bef0-40fbfa94f02a",
+              "name": "Insufficient permissions to access this spreadsheet",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"properties\": {\n    \"title\": \"My Spreadsheet\",\n    \"locale\": \"en_US\",\n    \"timeZone\": \"America/New_York\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3579742-f6c4-48ea-b71b-8acfd3a64cce",
+          "name": "Get Spreadsheet",
+          "request": {
+            "name": "Get Spreadsheet",
+            "description": {
+              "content": "Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By default, data within grids is not returned. Include the ranges request parameter to specify the data to retrieve.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spreadsheets",
+                ":spreadsheetId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ranges",
+                  "value": "<string>",
+                  "description": "The ranges to retrieve from the spreadsheet"
+                },
+                {
+                  "disabled": false,
+                  "key": "ranges",
+                  "value": "<string>",
+                  "description": "The ranges to retrieve from the spreadsheet"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeGridData",
+                  "value": "false",
+                  "description": "True if grid data should be returned"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "spreadsheetId",
+                  "description": "(Required) The spreadsheet ID to retrieve"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ba51c418-25ec-4457-af14-7ba39781c61c",
+              "name": "Spreadsheet retrieved successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    ":spreadsheetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeGridData",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) The spreadsheet ID to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"spreadsheetId\": \"string\",\n  \"properties\": {\n    \"title\": \"My Spreadsheet\",\n    \"locale\": \"en_US\",\n    \"timeZone\": \"America/New_York\",\n    \"autoRecalc\": \"<string>\"\n  },\n  \"sheets\": [\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    },\n    {\n      \"properties\": {\n        \"sheetId\": \"<integer>\",\n        \"title\": \"Sheet1\",\n        \"index\": \"<integer>\",\n        \"sheetType\": \"<string>\",\n        \"hidden\": \"<boolean>\",\n        \"gridProperties\": {\n          \"rowCount\": \"<integer>\",\n          \"columnCount\": \"<integer>\",\n          \"frozenRowCount\": \"<integer>\",\n          \"frozenColumnCount\": \"<integer>\"\n        }\n      }\n    }\n  ],\n  \"spreadsheetUrl\": \"https://gFrwFQYaInjnPdMg.hehPbvfHhBVHfFDtrj3exuypxOSBbdutZ5sNEnv3wcja9PbXY+sV+cobp\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "512dbb6d-968f-4f6a-b6d1-914b19dcb7c9",
+              "name": "Authentication required or access token invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    ":spreadsheetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeGridData",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) The spreadsheet ID to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a14d9270-29a2-4a4c-8dac-46052461483d",
+              "name": "Insufficient permissions to access this spreadsheet",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    ":spreadsheetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeGridData",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) The spreadsheet ID to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c08a0319-ceb4-40cc-9516-5fae417a69c7",
+              "name": "Spreadsheet or range not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    ":spreadsheetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ranges",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeGridData",
+                      "value": "false"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "spreadsheetId",
+                      "description": "(Required) The spreadsheet ID to retrieve"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cd288385-0ea6-431e-a773-7b94a75fa2d7",
+          "name": "Batch Update Spreadsheet",
+          "request": {
+            "name": "Batch Update Spreadsheet",
+            "description": {
+              "content": "Applies one or more updates to the spreadsheet. Each request is validated before being applied. If any request is not valid then the entire request will fail and nothing will be applied.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spreadsheets",
+                "{{spreadsheetId}}:batchUpdate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"includeSpreadsheetInResponse\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "be9abc69-c2c5-4b64-a671-0d28cf409023",
+              "name": "Batch update applied successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    "{{spreadsheetId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"includeSpreadsheetInResponse\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"spreadsheetId\": \"string\",\n  \"updatedSpreadsheet\": {\n    \"spreadsheetId\": \"string\",\n    \"properties\": {\n      \"title\": \"My Spreadsheet\",\n      \"locale\": \"en_US\",\n      \"timeZone\": \"America/New_York\",\n      \"autoRecalc\": \"<string>\"\n    },\n    \"sheets\": [\n      {\n        \"properties\": {\n          \"sheetId\": \"<integer>\",\n          \"title\": \"Sheet1\",\n          \"index\": \"<integer>\",\n          \"sheetType\": \"<string>\",\n          \"hidden\": \"<boolean>\",\n          \"gridProperties\": {\n            \"rowCount\": \"<integer>\",\n            \"columnCount\": \"<integer>\",\n            \"frozenRowCount\": \"<integer>\",\n            \"frozenColumnCount\": \"<integer>\"\n          }\n        }\n      },\n      {\n        \"properties\": {\n          \"sheetId\": \"<integer>\",\n          \"title\": \"Sheet1\",\n          \"index\": \"<integer>\",\n          \"sheetType\": \"<string>\",\n          \"hidden\": \"<boolean>\",\n          \"gridProperties\": {\n            \"rowCount\": \"<integer>\",\n            \"columnCount\": \"<integer>\",\n            \"frozenRowCount\": \"<integer>\",\n            \"frozenColumnCount\": \"<integer>\"\n          }\n        }\n      }\n    ],\n    \"spreadsheetUrl\": \"http://wxHdVoBwNqHVAqbNWPPJlY.rrEJWVFOHvbnz-m4e9Yu9tncztMxLluaVca5KVXZ,b,z8eQCSMgXXk.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "43bf759c-ba98-4f69-a56d-548fbdce9867",
+              "name": "Authentication required or access token invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    "{{spreadsheetId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"includeSpreadsheetInResponse\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c2dd47b9-2eac-492c-80fd-e3ff8a675391",
+              "name": "Insufficient permissions to access this spreadsheet",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spreadsheets",
+                    "{{spreadsheetId}}:batchUpdate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"requests\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"includeSpreadsheetInResponse\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5982,\n  \"message\": \"string\",\n  \"status\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://sheets.googleapis.com/v4",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "spreadsheetId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/spreadsheets.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "14565c57-eb0d-4bf1-b0bf-089a209dc846",
+    "name": "Google Sheets Developer Metadata Spreadsheets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. Supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, pivot tables, charts, and developer metadata. Authentication uses Google OAuth 2.0 with the sheets.readonly or sheets scope.\n\nContact Support:\n Name: Google Workspace Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Developer Metadata Sheets API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sheets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Copy Sheet To",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://sheets.googleapis.com/v4/spreadsheets/:spreadsheetId/sheets/:sheetId:copyTo",
+            "params": [
+              {
+                "name": "spreadsheetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sheetId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the sheet to copy"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Copies a single sheet from a spreadsheet to another spreadsheet. Returns the properties of the newly created sheet."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
