@@ -50,6 +50,12 @@ apis:
   tags:
   - Excel
   - Microsoft Graph
+  - Microsoft-365
+  - Spreadsheets
+  - OneDrive
+  tags_raw:
+  - Excel
+  - Microsoft Graph
   - Microsoft 365
   - Spreadsheets
   - OneDrive
@@ -87,6 +93,11 @@ apis:
   baseURL: https://sheetdb.io/api/v1
   tags:
   - Spreadsheets
+  - No-Code
+  - REST API
+  - Google Sheets
+  tags_raw:
+  - Spreadsheets
   - No Code
   - REST API
   - Google Sheets
@@ -104,6 +115,11 @@ apis:
   humanURL: https://sheety.co/
   baseURL: https://api.sheety.co
   tags:
+  - Spreadsheets
+  - No-Code
+  - REST API
+  - Google Sheets
+  tags_raw:
   - Spreadsheets
   - No Code
   - REST API
