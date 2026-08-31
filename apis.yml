@@ -104,7 +104,7 @@ apis:
   baseURL: https://sheetdb.io/api/v1
   tags:
   - Spreadsheets
-  - No-Code
+  - No Code
   - REST API
   - Google Sheets
   tags_raw:
@@ -127,7 +127,7 @@ apis:
   baseURL: https://api.sheety.co
   tags:
   - Spreadsheets
-  - No-Code
+  - No Code
   - REST API
   - Google Sheets
   tags_raw:
