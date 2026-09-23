@@ -60,18 +60,21 @@ artifacts:
   json-structure/spreadsheet-range-structure.json:
     method: unknown
     evidence: no authorship recorded
+  openapi/_original/google-sheets-openapi.yml:
+    method: harvested
+    evidence: fetched from the provider as-is; byte-identical to the source
   openapi/spreadsheets-developer-metadata-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/spreadsheets-sheets-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/spreadsheets-spreadsheets-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/spreadsheets-values-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/spreadsheets-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact

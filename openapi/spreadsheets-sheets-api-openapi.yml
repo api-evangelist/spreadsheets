@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Google Developer Metadata Sheets API
+  title: Google Sheets API
   description: The Google Sheets API v4 is a RESTful interface that lets developers read and modify Google Spreadsheet data programmatically. Supports creating spreadsheets, reading and writing cell values by range (A1 notation), batch operations for efficiency, managing sheet structure and formatting, pivot tables, charts, and developer metadata. Authentication uses Google OAuth 2.0 with the sheets.readonly or sheets scope.
   version: 4.0.0
   termsOfService: https://developers.google.com/terms/
@@ -65,31 +65,19 @@ paths:
           $ref: '#/components/responses/Forbidden'
 components:
   responses:
-    Unauthorized:
-      description: Authentication required or access token invalid
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
     Forbidden:
       description: Insufficient permissions to access this spreadsheet
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
-          type: string
-          description: Human-readable error message
-        status:
-          type: string
-          description: Error status
     SheetProperties:
       type: object
       properties:
@@ -129,6 +117,18 @@ components:
             frozenColumnCount:
               type: integer
               description: The number of columns that are frozen
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
   securitySchemes:
     OAuth2:
       type: oauth2

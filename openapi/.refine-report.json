@@ -1,10 +1,7 @@
 {
   "provider": "spreadsheets",
   "sources": [
-    "spreadsheets-developer-metadata-api-openapi.yml",
-    "spreadsheets-sheets-api-openapi.yml",
-    "spreadsheets-spreadsheets-api-openapi.yml",
-    "spreadsheets-values-api-openapi.yml"
+    "_original/google-sheets-openapi.yml"
   ],
   "outputs": [
     "spreadsheets-developer-metadata-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "google-sheets-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "spreadsheets-developer-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spreadsheets-sheets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spreadsheets-spreadsheets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spreadsheets-values-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
