@@ -60,7 +60,7 @@ apis:
   tags:
   - Excel
   - Microsoft Graph
-  - Microsoft-365
+  - Microsoft 365
   - Spreadsheets
   - OneDrive
   tags_raw:
@@ -69,6 +69,7 @@ apis:
   - Microsoft 365
   - Spreadsheets
   - OneDrive
+  - Microsoft-365
   properties:
   - type: Documentation
     url: https://learn.microsoft.com/en-us/graph/api/resources/excel

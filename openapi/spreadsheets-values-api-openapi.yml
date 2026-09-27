@@ -386,26 +386,17 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 components:
-  responses:
-    NotFound:
-      description: Spreadsheet or range not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: Insufficient permissions to access this spreadsheet
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Authentication required or access token invalid
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
+    AppendValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        tableRange:
+          type: string
+          description: The range (in A1 notation) of the table that values were appended to
+        updates:
+          $ref: '#/components/schemas/UpdateValuesResponse'
     UpdateValuesResponse:
       type: object
       properties:
@@ -419,18 +410,13 @@ components:
           type: integer
         updatedCells:
           type: integer
-    Error:
+    ClearValuesResponse:
       type: object
       properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
+        spreadsheetId:
           type: string
-          description: Human-readable error message
-        status:
+        clearedRange:
           type: string
-          description: Error status
     ValueRange:
       type: object
       description: Data within a range of the spreadsheet
@@ -452,23 +438,37 @@ components:
             type: array
             items:
               description: A cell value (string, number, boolean, or empty)
-    ClearValuesResponse:
+    Error:
       type: object
       properties:
-        spreadsheetId:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
           type: string
-        clearedRange:
+          description: Human-readable error message
+        status:
           type: string
-    AppendValuesResponse:
-      type: object
-      properties:
-        spreadsheetId:
-          type: string
-        tableRange:
-          type: string
-          description: The range (in A1 notation) of the table that values were appended to
-        updates:
-          $ref: '#/components/schemas/UpdateValuesResponse'
+          description: Error status
+  responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Spreadsheet or range not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     OAuth2:
       type: oauth2

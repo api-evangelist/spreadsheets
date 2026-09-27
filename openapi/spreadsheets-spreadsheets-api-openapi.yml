@@ -121,26 +121,12 @@ paths:
         '403':
           $ref: '#/components/responses/Forbidden'
 components:
-  responses:
-    NotFound:
-      description: Spreadsheet or range not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: Insufficient permissions to access this spreadsheet
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Authentication required or access token invalid
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
+    Sheet:
+      type: object
+      properties:
+        properties:
+          $ref: '#/components/schemas/SheetProperties'
     SheetProperties:
       type: object
       properties:
@@ -180,18 +166,41 @@ components:
             frozenColumnCount:
               type: integer
               description: The number of columns that are frozen
-    Error:
+    BatchUpdateRequest:
       type: object
       properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
+        requests:
+          type: array
+          description: A list of updates to apply to the spreadsheet
+          items:
+            type: object
+            description: A single kind of update to apply to a spreadsheet
+        includeSpreadsheetInResponse:
+          type: boolean
+          description: Determines if the update response should include the spreadsheet resource
+      required:
+      - requests
+    BatchUpdateResponse:
+      type: object
+      properties:
+        spreadsheetId:
           type: string
-          description: Human-readable error message
-        status:
-          type: string
-          description: Error status
+        replies:
+          type: array
+          items:
+            type: object
+        updatedSpreadsheet:
+          $ref: '#/components/schemas/Spreadsheet'
+    SpreadsheetRequest:
+      type: object
+      description: Request body for creating a new spreadsheet
+      properties:
+        properties:
+          $ref: '#/components/schemas/SpreadsheetProperties'
+        sheets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sheet'
     SpreadsheetProperties:
       type: object
       properties:
@@ -231,46 +240,37 @@ components:
           type: string
           format: uri
           description: The URL of the spreadsheet
-    BatchUpdateRequest:
+    Error:
       type: object
       properties:
-        requests:
-          type: array
-          description: A list of updates to apply to the spreadsheet
-          items:
-            type: object
-            description: A single kind of update to apply to a spreadsheet
-        includeSpreadsheetInResponse:
-          type: boolean
-          description: Determines if the update response should include the spreadsheet resource
-      required:
-      - requests
-    Sheet:
-      type: object
-      properties:
-        properties:
-          $ref: '#/components/schemas/SheetProperties'
-    SpreadsheetRequest:
-      type: object
-      description: Request body for creating a new spreadsheet
-      properties:
-        properties:
-          $ref: '#/components/schemas/SpreadsheetProperties'
-        sheets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Sheet'
-    BatchUpdateResponse:
-      type: object
-      properties:
-        spreadsheetId:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
           type: string
-        replies:
-          type: array
-          items:
-            type: object
-        updatedSpreadsheet:
-          $ref: '#/components/schemas/Spreadsheet'
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
+  responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Spreadsheet or range not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     OAuth2:
       type: oauth2
