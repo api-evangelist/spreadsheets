@@ -97,8 +97,8 @@ paths:
           $ref: '#/components/responses/Forbidden'
 components:
   responses:
-    Unauthorized:
-      description: Authentication required or access token invalid
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
       content:
         application/json:
           schema:
@@ -109,8 +109,8 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: Insufficient permissions to access this spreadsheet
+    Unauthorized:
+      description: Authentication required or access token invalid
       content:
         application/json:
           schema:

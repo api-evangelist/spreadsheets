@@ -122,6 +122,41 @@ paths:
           $ref: '#/components/responses/Forbidden'
 components:
   schemas:
+    BatchUpdateResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        replies:
+          type: array
+          items:
+            type: object
+        updatedSpreadsheet:
+          $ref: '#/components/schemas/Spreadsheet'
+    BatchUpdateRequest:
+      type: object
+      properties:
+        requests:
+          type: array
+          description: A list of updates to apply to the spreadsheet
+          items:
+            type: object
+            description: A single kind of update to apply to a spreadsheet
+        includeSpreadsheetInResponse:
+          type: boolean
+          description: Determines if the update response should include the spreadsheet resource
+      required:
+      - requests
+    SpreadsheetRequest:
+      type: object
+      description: Request body for creating a new spreadsheet
+      properties:
+        properties:
+          $ref: '#/components/schemas/SpreadsheetProperties'
+        sheets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Sheet'
     Sheet:
       type: object
       properties:
@@ -166,41 +201,6 @@ components:
             frozenColumnCount:
               type: integer
               description: The number of columns that are frozen
-    BatchUpdateRequest:
-      type: object
-      properties:
-        requests:
-          type: array
-          description: A list of updates to apply to the spreadsheet
-          items:
-            type: object
-            description: A single kind of update to apply to a spreadsheet
-        includeSpreadsheetInResponse:
-          type: boolean
-          description: Determines if the update response should include the spreadsheet resource
-      required:
-      - requests
-    BatchUpdateResponse:
-      type: object
-      properties:
-        spreadsheetId:
-          type: string
-        replies:
-          type: array
-          items:
-            type: object
-        updatedSpreadsheet:
-          $ref: '#/components/schemas/Spreadsheet'
-    SpreadsheetRequest:
-      type: object
-      description: Request body for creating a new spreadsheet
-      properties:
-        properties:
-          $ref: '#/components/schemas/SpreadsheetProperties'
-        sheets:
-          type: array
-          items:
-            $ref: '#/components/schemas/Sheet'
     SpreadsheetProperties:
       type: object
       properties:
@@ -223,6 +223,18 @@ components:
           - MINUTE
           - HOUR
           description: The amount of time to wait before volatile functions are recalculated
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
     Spreadsheet:
       type: object
       description: A Google Sheets spreadsheet resource
@@ -240,21 +252,9 @@ components:
           type: string
           format: uri
           description: The URL of the spreadsheet
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
-          type: string
-          description: Human-readable error message
-        status:
-          type: string
-          description: Error status
   responses:
-    Unauthorized:
-      description: Authentication required or access token invalid
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
       content:
         application/json:
           schema:
@@ -265,8 +265,8 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: Insufficient permissions to access this spreadsheet
+    Unauthorized:
+      description: Authentication required or access token invalid
       content:
         application/json:
           schema:

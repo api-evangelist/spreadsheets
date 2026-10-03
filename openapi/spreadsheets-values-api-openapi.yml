@@ -397,26 +397,6 @@ components:
           description: The range (in A1 notation) of the table that values were appended to
         updates:
           $ref: '#/components/schemas/UpdateValuesResponse'
-    UpdateValuesResponse:
-      type: object
-      properties:
-        spreadsheetId:
-          type: string
-        updatedRange:
-          type: string
-        updatedRows:
-          type: integer
-        updatedColumns:
-          type: integer
-        updatedCells:
-          type: integer
-    ClearValuesResponse:
-      type: object
-      properties:
-        spreadsheetId:
-          type: string
-        clearedRange:
-          type: string
     ValueRange:
       type: object
       description: Data within a range of the spreadsheet
@@ -438,6 +418,19 @@ components:
             type: array
             items:
               description: A cell value (string, number, boolean, or empty)
+    UpdateValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        updatedRange:
+          type: string
+        updatedRows:
+          type: integer
+        updatedColumns:
+          type: integer
+        updatedCells:
+          type: integer
     Error:
       type: object
       properties:
@@ -450,9 +443,16 @@ components:
         status:
           type: string
           description: Error status
+    ClearValuesResponse:
+      type: object
+      properties:
+        spreadsheetId:
+          type: string
+        clearedRange:
+          type: string
   responses:
-    Unauthorized:
-      description: Authentication required or access token invalid
+    Forbidden:
+      description: Insufficient permissions to access this spreadsheet
       content:
         application/json:
           schema:
@@ -463,8 +463,8 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: Insufficient permissions to access this spreadsheet
+    Unauthorized:
+      description: Authentication required or access token invalid
       content:
         application/json:
           schema:
