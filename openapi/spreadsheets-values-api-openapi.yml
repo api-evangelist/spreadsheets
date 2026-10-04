@@ -418,6 +418,18 @@ components:
             type: array
             items:
               description: A cell value (string, number, boolean, or empty)
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
     UpdateValuesResponse:
       type: object
       properties:
@@ -431,18 +443,6 @@ components:
           type: integer
         updatedCells:
           type: integer
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
-          type: string
-          description: Human-readable error message
-        status:
-          type: string
-          description: Error status
     ClearValuesResponse:
       type: object
       properties:
@@ -451,6 +451,12 @@ components:
         clearedRange:
           type: string
   responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
     Forbidden:
       description: Insufficient permissions to access this spreadsheet
       content:
@@ -459,12 +465,6 @@ components:
             $ref: '#/components/schemas/Error'
     NotFound:
       description: Spreadsheet or range not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Authentication required or access token invalid
       content:
         application/json:
           schema:

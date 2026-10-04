@@ -97,6 +97,12 @@ paths:
           $ref: '#/components/responses/Forbidden'
 components:
   responses:
+    Unauthorized:
+      description: Authentication required or access token invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
     Forbidden:
       description: Insufficient permissions to access this spreadsheet
       content:
@@ -109,13 +115,19 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Authentication required or access token invalid
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP status code
+        message:
+          type: string
+          description: Human-readable error message
+        status:
+          type: string
+          description: Error status
     DeveloperMetadata:
       type: object
       properties:
@@ -137,18 +149,6 @@ components:
           - DEVELOPER_METADATA_VISIBILITY_UNSPECIFIED
           - DOCUMENT
           - PROJECT
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          description: HTTP status code
-        message:
-          type: string
-          description: Human-readable error message
-        status:
-          type: string
-          description: Error status
   securitySchemes:
     OAuth2:
       type: oauth2
