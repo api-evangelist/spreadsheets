@@ -211,6 +211,12 @@ apis:
   - type: Discovery
     url: https://sheets.googleapis.com/$discovery/rest?version=v4
 common:
+- type: Plans
+  url: plans/spreadsheets-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/spreadsheets-rate-limits.yml
+- type: FinOps
+  url: finops/spreadsheets-finops.yml
 - type: AgenticAccess
   url: agentic-access/spreadsheets-agentic-access.yml
 - type: VulnerabilityDisclosure
